@@ -45,7 +45,7 @@ const SignUp = () => {
             </div>
 
             <div style={{cursor: 'pointer'}} className='flex_column'>
-                <CTA2 title="Sign up" url="/dashboard" />
+                <CTA2 title="Sign up" url="/Home" />
                 <Link to='/Home' className='top1'>
                     <p className='login_p underline'>Sign up later</p>
                 </Link>

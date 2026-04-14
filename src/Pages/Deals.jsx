@@ -7,7 +7,7 @@ const Home = () => {
 
     return (
         <div className=''>
-            Home
+            Deals
             <Nav />
         </div>
     );

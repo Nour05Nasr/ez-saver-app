@@ -1,0 +1,98 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #f0f0f0;
+  z-index: 1000;
+  /* gap: 6%; */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: #1a1a7a; /* Dark blue from your image */
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.nav-label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+  font-family: var(--font_2);
+}
+
+.nav-item.active {
+  color: var(--accemt_color); 
+}
+
+.nav-icon {
+  font-size: 24px;
+}
+
+.scan-button {
+  flex: 0 0 65px;
+  width: 64px;
+  height: 64px;
+  background-color: #1a1a7a;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* .scan-button .nav-icon {
+  color: #ffffff;
+  width: 80px;
+} */
+
+.scan-button.active {
+  background-color: var(--accemt_color); 
+}
+
+.nav-label.active{
+  color: var(--accemt_color); 
+
+}
+
+.icon-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon-img {
+  width: 24px;
+  height: 24px;
+}
+
+.nav-item.active .nav-icon-img {
+  filter: invert(58%) sepia(93%) saturate(1352%) hue-rotate(1deg) brightness(103%) contrast(105%);
+}
+
+.nav-item.active {
+  color: #FA921C;
+}
+
+
+.scan-img {
+  width: 48px;  
+  height: 48px;
+  filter: brightness(0) invert(1); /* Makes the scan icon white inside the blue box */
+}  
+
+.nav-link {
+  text-decoration: none;  
+  color: inherit;
+}  

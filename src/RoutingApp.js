@@ -7,6 +7,9 @@ import Onboarding3 from './Pages/Onboarding3';
 import LogIn from './Pages/LogIn';
 import SignUp from './Pages/SignUp';
 import Home from './Pages/Home';
+import Deals from './Pages/Deals';
+import Cart from './Pages/Cart';
+import Profile from './Pages/Profile';
 
 const RoutingApp = () => {
     return (
@@ -20,6 +23,9 @@ const RoutingApp = () => {
         <Route path="/LogIn" element={<LogIn />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/Deals" element={<Deals />} />
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Profile" element={<Profile />} />
 
     </Routes>
     </BrowserRouter>
