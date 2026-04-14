@@ -38,8 +38,7 @@ const LogIn = () => {
         }
     };
 
-    return (
-        <div className='log_body log_div'>
+    return (<div className='log_body log_div'>
             <div className='input_div gap'>
                 <img src={log_logo} alt="EZ-SAVER Logo" />
                 <h1 className='log_h top1'>Log In Your Account</h1>
@@ -97,7 +96,7 @@ const LogIn = () => {
                 </div>
 
                 <div onClick={handleLogin} style={{cursor: 'pointer'}} className='flex_column'>
-                    <CTA2 title="Log In" url='/Home'/>
+                    <CTA2 title="Log in" url='/Home'/>
                     <Link to='/Home' className='top1'>
                     <p className='login_p underline'>Log in later</p>
                     </Link>
