@@ -1,0 +1,36 @@
+textarea:focus, input:focus {
+    color: var(--primary_color);
+}
+
+input, select, textarea{
+    color: var(--primary_color);
+}
+input::placeholder {
+    color: var(--primary_color);
+  }
+.log_input{
+    /* width: ; */
+    height: 48px;
+    padding: 1% 4%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    align-self: stretch;
+    border-radius: 7.626px;
+    border: 2px solid rgba(18, 17, 128, 0.8);
+    background: rgba(18, 17, 128, 0.4);
+    font-family: var(--font_2);
+    color: var(--main_color);
+    text-align: left;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    border-radius: 8px;
+    margin: 1% 0;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary_color);
+}
