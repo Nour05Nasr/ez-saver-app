@@ -1,0 +1,34 @@
+.cta_div1{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+margin: 0;
+padding: 0;
+text-decoration: none;
+}
+.cta_div1:hover{
+    padding: 3px;
+    border-radius: 8px;
+    border: 3.5px dashed var(--secondry_color);
+}
+.cta_temp1{
+width: 190px;
+/* height: 6vh; */
+padding: 12px;
+font-family: var(--font_2);
+font-size: 20px;
+text-align: center;
+font-style: normal;
+line-height: normal;
+text-decoration: none;
+color: var(--primary_color);
+border-radius: 8px;
+box-shadow: 0 0 16px 0 rgba(41, 82, 216, 0.60), 2px 2px 8px 0 rgba(0, 0, 0, 0.25) inset, 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+border: 0px solid var(--secondry_color);
+background-color: var(--secondry_color);
+}
+.cta_temp1:hover{
+border-radius: 4px;
+padding: 10px;
+}

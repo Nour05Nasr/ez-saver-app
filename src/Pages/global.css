@@ -1,0 +1,90 @@
+@import url('https://fonts.cdnfonts.com/css/azonix');
+:root{
+    --h1: 3vw;
+    --h2: 2.5vw;
+    --h3: 1.8vw;
+    --p: 1.4vw;
+    --font_1: 'Azonix', sans-serif;
+    --font_2: 'Poppins', sans-serif;
+    --main_color: #121180;
+    --primary_color: #F9F9F9;
+    --secondry_color: #2952D8;
+    --accent_color: #FA921C;
+  }
+
+:root {
+  /* Brand Colors */
+  --color-primary: #1a237e;
+  --color-primary-dark: #0d1554;
+  --color-primary-light: #283593;
+  --color-accent: #FA921C;
+  --color-accent-hover: #f59a23;
+
+  /* Semantic Colors */
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent_color);
+  border-radius: 99px;
+}
+
+.flex_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
