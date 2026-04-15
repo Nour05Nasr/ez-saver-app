@@ -13,14 +13,12 @@
   }
 
 :root {
-  /* Brand Colors */
   --color-primary: #1a237e;
   --color-primary-dark: #0d1554;
   --color-primary-light: #283593;
   --color-accent: #FA921C;
   --color-accent-hover: #f59a23;
 
-  /* Semantic Colors */
   --color-success: #22c55e;
   --color-danger: #ef4444;
   --color-warning: #f59e0b;
@@ -28,8 +26,15 @@
 }
 
 body{
+    width: 420px !important;
+    height: 100vh; 
     margin: 0;
     padding: 0;
+      font-family: var(--font-body);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  /* border-right: 2px solid; */
+  /* background-color: aquamarine; */
 }
 
 *, *::before, *::after {
@@ -41,12 +46,6 @@ body{
 html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
-}
-
-body {
-  font-family: var(--font-body);
-  color: var(--color-text-primary);
-  line-height: 1.5;
 }
 
 button {

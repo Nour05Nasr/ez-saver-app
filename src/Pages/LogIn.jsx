@@ -15,23 +15,19 @@ const LogIn = () => {
     
     const navigate = useNavigate();
 
-    // Regex to block the specific special characters you mentioned
     const forbiddenChars = /[!#$%&'*+\-/=?^_{|}~]/;
 
     const handleLogin = (e) => {
         if (e) e.preventDefault();
         setError('');
 
-        // 1. Check for forbidden special characters
         if (forbiddenChars.test(email) || forbiddenChars.test(password)) {
             setError("Error: Special characters (!#$%&'*+...) are not allowed.");
             return;
         }
 
-        // 2. Exact match check (Case sensitive for password)
-        // Ensure no hidden spaces are causing the failure using .trim()
         if (email.trim() === 'user@ezsaver.com' && password === 'user@1230') {
-            navigate('/AdminDashboard');
+            navigate('/Home');
         } 
         else {
             setError('Invalid email or password. Please try again.');
@@ -59,7 +55,7 @@ const LogIn = () => {
                     <Input 
                         title="Enter Your Email" 
                         value={email}
-                        // IMPORTANT: Ensure your Input component uses the onChange prop!
+                
                         onChange={(e) => setEmail(e.target.value)}
                     />
 
@@ -79,7 +75,6 @@ const LogIn = () => {
                             </span>
                         </div>
 
-                        {/* Detailed Error Section */}
                         {error && (
                             <div className="error_container">
                                 {/* <span className="error_icon">⚠️</span> */}

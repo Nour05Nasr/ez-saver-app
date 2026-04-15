@@ -6,7 +6,7 @@ import SplashScreen from './SplashScreen';
 import CTA2 from '../Components/CTA2';
 import CTA1 from '../Components/CTA1';
 import './Onboarding.css';
-import './global.css';
+import './index.css';
 
 function Onboarding3() {
 
