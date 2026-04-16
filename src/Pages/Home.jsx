@@ -6,6 +6,9 @@ import compare_products from '../Assets/compare_products.svg';
 import allergy_shield from '../Assets/allergy_shield.svg';
 import recipe_generator from '../Assets/recipe_generator.svg';
 import oscar from '../Assets/oscar.png';
+import car from '../Assets/car.png';
+import metro from '../Assets/metro.png';
+import kazyon from '../Assets/kazyon.png';
 import like from '../Assets/like.svg';
 import ad from '../Assets/ad.png';
 import Nav from '../Components/Nav';
@@ -59,8 +62,8 @@ const Home = () => {
                         <div className='like_div'>
                             <img src={like} alt="" />
                         </div>
-                            <h1 className='like_h'>Oscar Stores</h1>
-                            <img className='partner' src={oscar} alt="" />
+                            <h1 className='like_h'>Metro</h1>
+                            <img className='partner' src={metro} alt="" />
                         </div>
                         <div className='like_card'>  
                         <div className='like_div'>
@@ -73,16 +76,15 @@ const Home = () => {
                         <div className='like_div'>
                             <img src={like} alt="" />
                         </div>
-                            <h1 className='like_h'>Oscar Stores</h1>
-                            <img className='partner' src={oscar} alt="" />
+                            <h1 className='like_h'>Carfeour</h1>
+                            <img className='partner' src={car} alt="" />
                         </div>
                         <div className='like_card'>  
                         <div className='like_div'>
                             <img src={like} alt="" />
                         </div>
-                            <h1 className='like_h'>Oscar Stores</h1>
-                            <img className='partner' src={oscar} alt="" />
-                        </div>
+                            <h1 className='like_h'>Kazyon</h1>
+                            <img className='partner' src={kazyon} alt="" />                        </div>
                     </div>
 
                                 <div className='ad_card'>
