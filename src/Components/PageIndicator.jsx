@@ -3,7 +3,6 @@ import './PageIndicator.css';
 
 
 const PageIndicator = ({ activeIndex }) => {
-  // Array representing the three screens (0, 1, 2)
   const dots = [0, 1, 2];
 
   return (

@@ -1,6 +1,20 @@
+.home_body{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: var(--primary_color);
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .home_body::-webkit-scrollbar {
+    display: none;
+} */
 .scroll_div{
     width: 100%;
-    padding: 0 0 0 200px;
+    padding: 0 0 0 220px;
     gap: 3%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -9,16 +23,26 @@
     -ms-overflow-style: none;
     /* background-color: antiquewhite; */
 }
+.scroll_div2{
+    width: 100%;
+    height: 28vh;
+    padding: 0 0 0 216px;
+    gap: 8%;
+    overflow-x: auto;
+    /* overflow-y: hidden; */
+    /* scroll-behavior: smooth; */
+    /* scrollbar-width: none; */
+    /* -ms-overflow-style: none; */
+    /* background-color: antiquewhite; */
+}
 
 .scroll_div::-webkit-scrollbar {
     display: none;
-align-items: center;
-gap: 8px;
-flex-shrink: 0;
-border-radius: 8px;
-border: 2px solid var(--Royal-Azure, #2952D8);
-background: rgba(41, 82, 216, 0.65);
 }
+.scroll_div2::-webkit-scrollbar {
+    display: none;
+}
+
 .card1:hover{
     background-color: var(--secondry_color);
 }
@@ -116,7 +140,7 @@ background: rgba(11, 174, 92, 0.65);
 .card_h{
     color: var(--primary_color);
 text-align: center;
-font-family: Azonix;
+font-family: var(--font_1);
 font-size: 16px;
 font-style: normal;
 font-weight: 400;
@@ -125,17 +149,22 @@ line-height: 120%;
 }
 
 .ad_card{
-    width: 326px;
+    width: 90%;
 height: 136px;
 /* padding: 16px 12px 16px 16px; */
 display: flex;
 justify-content: space-evenly;
 align-items: center ;
 flex-shrink: 0;
-background-color: #2952D8;
+background-color: var(--secondry_color);
 border-radius: 16px;
 border-right: 1px dashed var(--Bright-Snow, #F9F9F9);
 /* background: url(<path-to-image>) lightgray 50% / cover no-repeat; */
+}
+
+.ad_w{
+    width: 62%;
+    padding: 0 6%;
 }
 
 .ad_p{
@@ -147,4 +176,45 @@ border-right: 1px dashed var(--Bright-Snow, #F9F9F9);
 
 .gap_vh{
     gap: 2vh;
+}
+
+.like_card{
+display: flex;
+/* width: 155px;
+height: 171px; */
+padding: 2% 4%;
+flex-direction: column;
+align-items: flex-start;
+gap: 2%;
+border-radius: 16%;
+background-color: #fff;
+}
+
+.like_div{
+    margin: -12% 0 0 84%;
+    float: right;
+    right: 0;
+    top: 0;
+    /* width: 46px;
+    height: 80px; */
+    padding: 6% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 56px;
+    background-color: #fff;
+}
+
+.like_h{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: var(--font_1);
+    font-size: 16px;
+    color: var(--main_color);
+}
+
+.partner{
+    width: 120px;
 }

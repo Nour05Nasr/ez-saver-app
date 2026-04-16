@@ -11,17 +11,6 @@ const SignUp = () => {
             <div className='input_div gap'>
             <img src={log_logo} alt="EZ-SAVER Logo" />
                <h1 className='log_h'>Create Your Account</h1>
-               
-                <div className='google'>
-                        <img src={google} alt="" />
-                        <p className='login_P'>Log In with Google</p>
-                    </div> 
-
-                    <div className='flex_row gap hr_w top1'>
-                      <hr className='hr' />
-                      <p  className='login_p'>or</p>
-                      <hr className='hr' />
-                    </div>
             
             <div className='column_start'>
                 <p className='login_p'>Username</p>

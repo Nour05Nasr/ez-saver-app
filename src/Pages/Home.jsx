@@ -5,6 +5,8 @@ import item_finder from '../Assets/item_finder.svg';
 import compare_products from '../Assets/compare_products.svg';
 import allergy_shield from '../Assets/allergy_shield.svg';
 import recipe_generator from '../Assets/recipe_generator.svg';
+import oscar from '../Assets/oscar.png';
+import like from '../Assets/like.svg';
 import ad from '../Assets/ad.png';
 import Nav from '../Components/Nav';
 import Title from '../Components/Title';
@@ -14,7 +16,7 @@ import './Home.css';
 const Home = () => {
 
     return (
-        <div className=''>
+        <div className='home_body'>
             <Nav />
             <Header />
             <div className='flex_column gap_vh'>
@@ -44,7 +46,7 @@ const Home = () => {
 
                 <div className='ad_card'>
                     <img src={ad} alt="" />
-                    <div className='flex_column'>
+                    <div className='flex_column ad_w'>
                         <h1 className='card_h'>Start Shopping with EZ-SAVER</h1>
                         <p className='ad_p'>Shopping Made Easy</p>
                         {/* <button className=''>start now</button> */}
@@ -52,31 +54,47 @@ const Home = () => {
                 </div>
 
                 <Title title='Our Partners' />
-                      <div className='flex_row scroll_div'>
-                    <div className='card1'> 
-                        <img src={shared_list} alt="" />
-                        <p className='card_h'>Shared List</p>
+                      <div className='flex_row scroll_div2'>
+                        <div className='like_card'>  
+                        <div className='like_div'>
+                            <img src={like} alt="" />
+                        </div>
+                            <h1 className='like_h'>Oscar Stores</h1>
+                            <img className='partner' src={oscar} alt="" />
+                        </div>
+                        <div className='like_card'>  
+                        <div className='like_div'>
+                            <img src={like} alt="" />
+                        </div>
+                            <h1 className='like_h'>Oscar Stores</h1>
+                            <img className='partner' src={oscar} alt="" />
+                        </div>
+                        <div className='like_card'>  
+                        <div className='like_div'>
+                            <img src={like} alt="" />
+                        </div>
+                            <h1 className='like_h'>Oscar Stores</h1>
+                            <img className='partner' src={oscar} alt="" />
+                        </div>
+                        <div className='like_card'>  
+                        <div className='like_div'>
+                            <img src={like} alt="" />
+                        </div>
+                            <h1 className='like_h'>Oscar Stores</h1>
+                            <img className='partner' src={oscar} alt="" />
+                        </div>
                     </div>
-                    <div className='card2'> 
-                        <img src={item_finder} alt="" />
-                        <p className='card_h'>Item Finder</p>
-                    </div>
-                    <div className='card3'> 
-                        <img src={compare_products} alt="" />
-                        <p className='card_h'>Compare Products</p>
-                    </div>
-                    <div className='card4'> 
-                        <img src={allergy_shield} alt="" />
-                        <p className='card_h'>Allergy Shield</p>
-                    </div>
-                    <div className='card5'> 
-                        <img src={recipe_generator} alt="" />
-                        <p className='card_h'>Recipe Generator</p>
+
+                                <div className='ad_card'>
+                    <img src={ad} alt="" />
+                    <div className='flex_column ad_w'>
+                        <h1 className='card_h'>Start Shopping with EZ-SAVER</h1>
+                        <p className='ad_p'>Shopping Made Easy</p>
+                        {/* <button className=''>start now</button> */}
                     </div>
                 </div>
-            </div>
-        </div>
-    );
-}
+                
+                </div>
+            </div>);}
 
 export default Home;

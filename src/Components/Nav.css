@@ -2,9 +2,9 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 420px;
+  width: 393px;
   height: 80px;
-  background-color: #ffffff;
+  background-color: var(--primary_color);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -57,11 +57,11 @@
 } */
 
 .scan-button.active {
-  background-color: var(--accemt_color); 
+  background-color: var(--accent_color); 
 }
 
 .nav-label.active{
-  color: var(--accemt_color); 
+  color: var(--accent_color); 
 
 }
 
@@ -85,7 +85,6 @@
   color: #FA921C;
 }
 
-
 .scan-img {
   width: 48px;  
   height: 48px;
@@ -96,3 +95,4 @@
   text-decoration: none;  
   color: inherit;
 }  
+
