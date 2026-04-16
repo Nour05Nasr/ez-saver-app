@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
-import { Search} from 'lucide-react';
-import notify from '../Assets/notify.svg';
-import './Header.css';
+import back from '../Assets/back.svg';
+import './HomeHeader.css';
 
-const Header = (props) => {
+const HomeHeader = (props) => {
 
-    return (<div className='flex_column header_w'>
-        <div className='flex_row_end'>
-            <h1 className='header_title'>Welcome User</h1>
-            <img src={notify} alt="" />
-        </div>
-
-        <div className="search-wrapper header__right">
-              <Search size={18} className="search-icon" />
-              <input className='header__subtitle' type="text" placeholder="Search Anything..." />
-        </div>
+    return (<div className='header_w flex_row_end'>
+        <Link to={props.url}>
+            <img src={back} alt="" />
+        </Link>
+            <h1 className='header_title'>{props.title}</h1>
     </div>);}
 
-export default Header;
+export default HomeHeader;

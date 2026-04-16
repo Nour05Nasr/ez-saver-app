@@ -13,15 +13,14 @@ import like from '../Assets/like.svg';
 import ad from '../Assets/ad.png';
 import Nav from '../Components/Nav';
 import Title from '../Components/Title';
-import Header from '../Components/Header';
+import HomeHeader from '../Components/HomeHeader';
 import './Home.css';
 
 const Home = () => {
 
     return (
         <div className='home_body'>
-            <Nav />
-            <Header />
+            <HomeHeader />
             <div className='flex_column gap_vh'>
                 <Title title='Frequently Used' />
            <div className='flex_row scroll_div'>
@@ -95,8 +94,9 @@ const Home = () => {
                         {/* <button className=''>start now</button> */}
                     </div>
                 </div>
-                
                 </div>
+                
+            <Nav />
             </div>);}
 
 export default Home;

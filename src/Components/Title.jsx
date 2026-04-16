@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import Nav from '../Components/Nav';
-import Header from '../Components/Header';
+import Header from './HomeHeader';
 import './Title.css';
 
 const Home = (props) => {
