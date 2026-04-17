@@ -8,7 +8,6 @@ import like from '../Assets/like.svg';
 import ad from '../Assets/ad.png';
 import './Deals.css';
 
-
 const Deals = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -71,8 +71,9 @@
 }
 
 .promo_banner {
+    /* width: 90%; */
     background-color: var(--secondry_color);
-    margin:8px 20px 110px 20px;
+    margin:8px 20px 110px 0;
     border-radius: 20px;
     padding: 16px;
     text-align: center;
