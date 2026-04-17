@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../Supabase';
 import BackHeader from '../Components/BackHeader';
+import CTA2 from '../Components/CTA2';
 import Nav from '../Components/Nav';
 import empty_cart from '../Assets/empty_cart.png';
 import './Cart.css';
@@ -51,7 +52,7 @@ const Cart = () => {
         <>
           <div className="wavy_divider"></div>
           <div className='cart_bg'>
-            <div className='total_summary_row'>
+            <div className='total_summary'>
               <div className='summary_item'>
                 <p className='label'>Current Total</p>
                 <h2 className='value'>
@@ -69,12 +70,11 @@ const Cart = () => {
             <div className='product_list'>
               {products.map((product) => (
                 <div className='cart_card' key={product.id}>
-                  <div className='product_img_box'>
-                    <img src={product.img || product.image_url} alt={product.name} />
-                  </div>
+                    <img src={product.img} alt={product.name} />
+               
                   <div className='product_details'>
                     <h3 className='product_name'>{product.name}</h3>
-                    <p className='product_price'>{product.price} EGP</p>
+                    <p className='price'>{product.price} EGP</p>
                     <div className='action_row'>
                       <div className='counter_group'>
                         <button className='count_btn' onClick={() => updateQty(product.id, -1)}>-</button>
@@ -87,6 +87,7 @@ const Cart = () => {
                 </div>
               ))}
             </div>
+            <CTA2 title='checkout' url='/Checkout'/>
           </div>
         </>
       ) : (
