@@ -21,7 +21,7 @@ const Home = () => {
     return (
         <div className='home_body'>
             <HomeHeader />
-            <div className='flex_column gap_vh'>
+            <div className='flex_column gap_vh '>
                 <Title title='Frequently Used' />
            <div className='flex_row scroll_div'>
                     <div className='card1'> 
@@ -68,8 +68,8 @@ const Home = () => {
                         <div className='like_div'>
                             <img src={like} alt="" />
                         </div>
-                            <h1 className='like_h'>Oscar Stores</h1>
-                            <img className='partner' src={oscar} alt="" />
+                            <h1 className='like_h'>Kazyon</h1>
+                            <img className='partner' src={kazyon} alt="" /> 
                         </div>
                         <div className='like_card'>  
                         <div className='like_div'>
@@ -82,8 +82,9 @@ const Home = () => {
                         <div className='like_div'>
                             <img src={like} alt="" />
                         </div>
-                            <h1 className='like_h'>Kazyon</h1>
-                            <img className='partner' src={kazyon} alt="" />                        </div>
+                            <h1 className='like_h'>Oscar</h1>
+                            <img className='partner' src={oscar} alt="" />
+                        </div>
                     </div>
 
                                 <div className='ad_card'>

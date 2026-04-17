@@ -14,7 +14,7 @@ const HomeHeader = (props) => {
 
         <div className="search-wrapper header__right">
               <Search size={18} className="search-icon" />
-              <input className='header__subtitle' type="text" placeholder="Search Anything..." />
+              <input className='header_subtitle' type="text" placeholder="Search Anything..." />
         </div>
     </div>);}
 

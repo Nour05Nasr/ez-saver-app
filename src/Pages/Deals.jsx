@@ -1,96 +1,108 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { supabase } from '../Supabase';
 import Nav from '../Components/Nav';
-import like from '../Assets/like.svg';
 import Header from '../Components/Header';
-import ad from '../Assets/ad.png';
+import Category from '../Components/Category';
 import Title from '../Components/Title';
-import './LogIn.css';
+import like from '../Assets/like.svg';
+import ad from '../Assets/ad.png';
+import './Deals.css';
 
-const Home = () => {
 
-    return (
-        <div className='home_body'>
-            <Header title='Deals & Promotions' url='/Home'/>
+const Deals = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-              <div className='flex_column gap_vh'>
-                <Title title='Top Deals' />
-                      <div className='flex_row scroll_div2'>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Metro</h1>
-                            {/* <img className='partner' src={metro} alt="" /> */}
-                        </div>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Oscar Stores</h1>
-                            {/* <img className='partner' src={oscar} alt="" /> */}
-                        </div>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Carfeour</h1>
-                            {/* <img className='partner' src={car} alt="" /> */}
-                        </div>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Kazyon</h1>
-                            {/* <img className='partner' src={kazyon} alt="" />                        </div> */}
-                    </div>
-                    </div>
+    useEffect(() => {
+  async function getAllProducts() {
+        setLoading(true);
+    const { data, error } = await supabase
+        .from('products')
+        .select("*")
+        .limit(6)
+        .order("id", { ascending: true }); 
 
-                <div className='ad_card'>
-                    <img src={ad} alt="" />
-                    <div className='flex_column ad_w'>
-                        <h1 className='card_h'>Start Shopping with EZ-SAVER</h1>
-                        <p className='ad_p'>Shopping Made Easy</p>
-                        {/* <button className=''>start now</button> */}
-                    </div>
-                </div>
+            if (!error) {
+                setProducts(data);
+                // console.log("Fetched Partners:", data);
+            }
+            setLoading(false);
+        }
+        getAllProducts();
+    }, []);
 
-                <Title title='All Deals' />
-                      <div className='flex_row scroll_div2'>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Metro</h1>
-                            {/* <img className='partner' src={metro} alt="" /> */}
-                        </div>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Oscar Stores</h1>
-                            {/* <img className='partner' src={oscar} alt="" /> */}
-                        </div>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Carfeour</h1>
-                            {/* <img className='partner' src={car} alt="" /> */}
-                        </div>
-                        <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
-                            <h1 className='like_h'>Kazyon</h1>
-                            {/* <img className='partner' src={kazyon} alt="" />                        </div> */}
-                    </div>
-                    </div>
-              </div>
+    // if (loading) return <div className="loader-container">Loading Data...</div>;
 
-            <Nav />
+  return (
+    <div className='home_body'>
+      {/* <Header title='Deals & Promotions' url='/Home' /> */}
+      <h1 className='header_title header_w'>Deals & Promotions</h1>
+      <div className='section_container'>
+        <div className='flex_row_between'>
+            <h3 className='header_title'>Partners Deals</h3>
         </div>
-    );
+        <div className='category_scroll_div'>
+          <Category title='Oscar' />
+          <Category title='Seoudi' />
+          <Category title='Metro' />
+          <Category title='Kazyon' />
+          <Category title='spinneys' />
+        </div>
+      </div>
+
+      <div className='section_container'>
+            <Title title='TOP DEALS' />
+        <div className='product_scroll_div'>
+          {products.map((product) => (
+            <div className='product_card' key={product.id}>
+              <img src={product.img} className='product_img' alt={product.name} />
+              <div className='flex_column_start'>
+                <p className='product_name'>{product.name}</p>
+                <h2 className='price'>{product.price} EGP</h2>
+                {/* <div className='price_partner_row'>
+                    <img src={product.logo} className='partner_mini_logo' alt="partner" />
+                </div> */}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+
+      <div className='section_container'>
+            <Title title='ALL DEALS' />
+             <div className='product_scroll_div'>
+          {products.map((product) => (
+            <div className='product_card' key={product.id}>
+                {/* <div className='like_div2'>
+                    <img src={like} alt="like" />
+                </div> */}
+              <img src={product.img} className='product_img' alt={product.name} />
+              <div className='flex_column_start'>
+                <p className='product_name'>{product.name}</p>
+                <h2 className='price'>{product.price} EGP</h2>
+                {/* <div className='price_partner_row'>
+                    <img src={product.logo} className='partner_mini_logo' alt="partner" />
+                </div> */}
+              </div>
+            </div>
+          ))}
+
+        </div>
+                <div className='promo_banner'>
+        <div className='promo_content'>
+            <h2 className='card_h'>REDEEM YOUR POINTS & GET UNLIMITED OFFERS</h2>
+            <p className='ad_p'>Shopping Made EASY!</p>
+            <button className='promo_btn ad_p'>Redeem</button>
+        </div>
+      </div>
+      
+      </div>
+
+      <Nav />
+    </div>
+  );
 }
 
-export default Home;
+export default Deals;

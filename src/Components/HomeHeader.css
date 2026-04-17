@@ -22,9 +22,10 @@
   letter-spacing: -0.362px;
 }
 
-.header__subtitle {
+.header_subtitle {
+  font-family: var(--font_2);
   font-size: 14px;
-  color: var(--color-text-secondary);
+  color: var(--main_color);
   font-weight: 400;
 }
 

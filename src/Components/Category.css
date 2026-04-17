@@ -1,0 +1,19 @@
+.category{
+    height: 40px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary_color);
+    font-size: 14px;
+    font-weight: 400;
+    font-family: var(--font_2);
+    gap: 10px;
+    border-radius: 8px;
+    border: 2px solid var(--Electric-Royal, #121180);
+    background: rgba(18, 17, 128, 0.50);
+}
+.category:hover{
+    border: 2px solid var(--accent_color);
+    background: var(--accent_color);
+}
