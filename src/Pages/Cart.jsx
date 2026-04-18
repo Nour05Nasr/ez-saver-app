@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../Supabase';
-import BackHeader from '../Components/BackHeader';
+import Header2 from '../Components/Header2';
 import CTA2 from '../Components/CTA2';
 import Nav from '../Components/Nav';
 import empty_cart from '../Assets/empty_cart.png';
@@ -42,11 +42,10 @@ const Cart = () => {
 
   return (
     <div className='cart_page'>
-      <BackHeader 
+
+      <Header2
         title='My Cart' 
-        subtitle={`${totalItems} items`} 
-        url='/Home' 
-      />
+        subtitle={`${totalItems} items`} />
       
       {totalItems > 0 ? (
         <>
@@ -66,7 +65,6 @@ const Cart = () => {
             </div>
 
             <div className='dashed_line'></div>
-
             <div className='product_list'>
               {products.map((product) => (
                 <div className='cart_card' key={product.id}>
