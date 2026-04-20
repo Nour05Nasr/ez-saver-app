@@ -33,23 +33,19 @@ const SharedList2 = () => {
     getAllProducts();
   }, []);
 
-  // 1. Logic for Checking/Unchecking
   const toggleCheck = (id) => {
     setProducts(products.map(product => 
       product.id === id ? { ...product, checked: !product.checked } : product
     ));
   };
 
-  // 2. Logic for Removing (Bar will recalculate automatically)
   const removeItem = (id) => {
     setProducts(products.filter(product => product.id !== id));
   };
 
-  // 3. Dynamic Calculations
   const totalItems = products.length;
   const completedItems = products.filter(p => p.checked).length;
   
-  // Calculate width for the .progress_bar
   const progressWidth = totalItems > 0 ? (completedItems / totalItems) * 100 : 0;
 
   return (
@@ -101,7 +97,7 @@ const SharedList2 = () => {
                     
                     <div className='column_start'>
                       <h3 className='product_name'>{product.name}</h3>
-                      <p className='price'>{product.aisle} EGP</p>
+                      <p className='price'>{product.aisle}</p>
                       <div className='flex_row'>
                         <p className='header_subtitle'>{product.value}</p>
                         <p className='header_subtitle'>{product.unit}</p>
@@ -109,7 +105,7 @@ const SharedList2 = () => {
                     </div>
                     
                     <div className='flex_column gap_vh'>
-                      <Link to='/FindItem' className='find_link'>Find</Link>
+                      <Link to={`/ItemFinder/${product.id}`} className='find_link'>Find</Link>
                       <button className='remove_link' onClick={() => removeItem(product.id)}>
                         Remove
                       </button>

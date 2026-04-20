@@ -30,10 +30,12 @@ const Home = () => {
                         <p className='card_h'>Shared List</p>
                     </div>
                         </Link>
+                        <Link to='/ItemFinder'>
                     <div className='card2'> 
                         <img src={item_finder} alt="" />
                         <p className='card_h'>Item Finder</p>
                     </div>
+                        </Link>
                     <div className='card3'> 
                         <img src={compare_products} alt="" />
                         <p className='card_h'>Compare Products</p>

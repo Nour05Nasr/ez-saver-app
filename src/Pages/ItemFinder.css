@@ -1,0 +1,94 @@
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map_card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 4%;
+    padding: 20px;
+    align-self: stretch;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #E0E0E0;
+}
+
+.map_title{
+    font-family: var(--font_1);
+    font-size: 16px;
+    color: var(--accent_color);
+}
+
+.map_title2{
+    font-family: var(--font_2);
+    font-size: 20px;
+    color: var(--main_color);
+}
+
+.instock{
+    color: var(--accent_color);
+font-family: Inter;
+font-size: 15.471px;
+font-style: normal;
+font-weight: 500;
+line-height: 22.102px; /* 142.857% */
+letter-spacing: -0.166px;
+}
+
+.center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_icon_top {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+}
+
+.nav_icon_bottom {
+    width: 60px; 
+    height: 60px;
+}
+
+.location_icon_small {
+    width: 20px;
+    height: 20px;
+}
+
+.icon_text_gap {
+    gap: 8px;
+    align-items: center;
+}
+
+.aisle_info {
+    color: #FA921C; 
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.main_map_img {
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+}
+
+.instock {
+    font-family: var(--font_2);
+       color: var(--accent_color);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.bottom_map{
+    margin-bottom: 110px;
+}
