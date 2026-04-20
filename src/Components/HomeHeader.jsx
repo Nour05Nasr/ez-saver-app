@@ -12,10 +12,20 @@ const HomeHeader = (props) => {
             <img src={notify} alt="" />
         </div>
 
-        <div className="search-wrapper header__right">
-              <Search size={18} className="search-icon" />
+        <div className='search_container'>
+                <div className='search_wrapper'>
+              <Search size={18} className="search_icon" />
+                    <input 
+                        type="text" 
+                        placeholder="Search..." 
+                        className='search_input' 
+                    />
+                </div>
+            </div>
+
+        {/* <div className="search-wrapper header__right">
               <input className='header_subtitle' type="text" placeholder="Search Anything..." />
-        </div>
+        </div> */}
     </div>);}
 
 export default HomeHeader;
