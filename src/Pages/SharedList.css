@@ -1,0 +1,67 @@
+.add_div{
+    /* margin: -160px -18% 0 0; */
+    float: right;
+    right: 0;
+    top: 0;
+    /* width: 46px;
+    height: 80px; */
+    padding: 0 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 56px;
+    background-color: #fff;
+    border: 2px solid #e6e6e6;
+}
+.add_btn{
+    font-family: var(--font_2);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--accent_color);
+}
+
+.bottom{
+  margin-bottom: 100px;
+}
+
+.shared_list_bar {
+  background: #f4f4f4;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.member_img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.overlap { margin-left: -12px; }
+
+.product_item {
+  position: relative;
+  margin-right: 15px;
+}
+
+.add_btn_top {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: white;
+  border: 2px solid #FA921D;
+  color: #FA921D;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 2;
+}
+

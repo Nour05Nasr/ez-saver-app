@@ -15,7 +15,7 @@ const Profile = () => {
   ];
 
   const generalMenu = [
-    'Feedback', 'Accessibility', 'Privacy Policy', 'Terms & Conditions', 'Help & Support'
+     'Accessibility', 'Privacy Policy', 'Terms & Conditions', 'Help & Support'
   ];
 
   return (

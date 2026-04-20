@@ -10,6 +10,8 @@ import Home from './Pages/Home';
 import Deals from './Pages/Deals';
 import Cart from './Pages/Cart';
 import Profile from './Pages/Profile';
+import SharedList from './Pages/SharedList';
+import SharedList2 from './Pages/SharedList2';
 
 const RoutingApp = () => {
     return (
@@ -26,6 +28,8 @@ const RoutingApp = () => {
         <Route path="/Deals" element={<Deals />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/SharedList" element={<SharedList />} />
+        <Route path="/SharedList2" element={<SharedList2 />} />
 
     </Routes>
     </BrowserRouter>

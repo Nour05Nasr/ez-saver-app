@@ -24,10 +24,12 @@ const Home = () => {
             <div className='flex_column gap_vh '>
                 <Title title='Frequently Used' />
            <div className='flex_row scroll_div'>
+                        <Link to='/SharedList'>
                     <div className='card1'> 
                         <img src={shared_list} alt="" />
                         <p className='card_h'>Shared List</p>
                     </div>
+                        </Link>
                     <div className='card2'> 
                         <img src={item_finder} alt="" />
                         <p className='card_h'>Item Finder</p>
@@ -56,7 +58,7 @@ const Home = () => {
                 </div>
 
                 <Title title='Our Partners' />
-                      <div className='flex_row scroll_div2'>
+                      <div className='flex_row scroll_div2 bottom'>
                         <div className='like_card'>  
                         <div className='like_div'>
                             <img src={like} alt="" />
@@ -86,15 +88,6 @@ const Home = () => {
                             <img className='partner' src={oscar} alt="" />
                         </div>
                     </div>
-
-                                <div className='ad_card'>
-                    <img src={ad} alt="" />
-                    <div className='flex_column ad_w'>
-                        <h1 className='card_h'>Start Shopping with EZ-SAVER</h1>
-                        <p className='ad_p'>Shopping Made Easy</p>
-                        {/* <button className=''>start now</button> */}
-                    </div>
-                </div>
                 </div>
                 
             <Nav />
