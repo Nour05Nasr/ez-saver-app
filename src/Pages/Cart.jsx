@@ -92,7 +92,7 @@ const Cart = () => {
         <div className='empty_cart_container'>
           <h1 className='header_title'>YOUR CART IS EMPTY</h1>
           <p className='header_subtitle'>
-            Scan more products to get added to your cart automatically and enjoy your journey
+            Scan more products to get added to your cart automatically and enjoy your shopping journey
           </p>
           <img src={empty_cart} alt="Empty Cart Illustration" className='empty_img' />
         </div>

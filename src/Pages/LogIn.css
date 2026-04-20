@@ -41,12 +41,22 @@ justify-content: space-between;
 align-items: center;
 /* background-color: tomato; */
 }
+
+input[type="checkbox"] {
+  accent-color: var(--accent_color); 
+  width: 20px;
+  height: 20px;
+}
+
 .checkbox{
     width: 18px;
     height: 18px;
     border-radius: 100%;
     border: 2px solid var(--main_color);
+    color: var(--accent_color);
+background-color: var(--accent_color);
 }
+
 .checkbox_div{
     width: 100%;
     display: flex;
@@ -54,7 +64,10 @@ flex-direction: row;
 justify-content: start;
 align-items: center;
 gap: 3%;
+color: var(--accent_color);
+background-color: var(--accent_color);
 }
+
 .column_start{
     display: flex;
 flex-direction: column;

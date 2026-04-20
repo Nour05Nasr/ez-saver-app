@@ -64,4 +64,69 @@
   font-weight: bold;
   z-index: 2;
 }
+.list_bg {
+     width: 396px;
+  background-color: var(--secondry_color);
+  padding: 0 20px 20px 20px;
+  min-height: 100vh;
+}
+
+.wavy_divider2 {
+    width: 396px;
+  height: 50px;
+  background-color: var(--secondry_color); 
+  mask-image: radial-gradient(20px at 50% 100%, transparent 100%, #000 100%);
+  mask-size: 40px 100%;
+  transform: rotate(180deg);
+  /* margin-top: -1px; */
+}
+
+.label{
+  font-family: var(--font_2);
+  font-size: 12px;
+  color: var(--primary_color);
+}
+
+.bar_div{
+  width: 100%;
+  position: relative;
+}
+
+/* .progress_bar{
+  width: 100%;
+  display: flex;
+  height: 9.252px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 19401852px;
+  background: var(--Bright-Snow, #F9F9F9);
+  position: absolute;
+  z-index: -2;
+} */
+
+.progress_bar1{
+  width: 30%;
+  display: flex;
+  height: 9.252px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 19401852px;
+  background: var(--accent_color);
+}
+
+.find_link{
+  font-family: var(--font_2);
+  display: flex;
+  width: 69.387px;
+  height: 37.006px;
+padding: 11.564px;
+justify-content: center;
+align-items: center;
+gap: 11.564px;
+border-radius: 6.939px;
+color: var(--primary_color);
+background: var(--accent_color);
+}
 

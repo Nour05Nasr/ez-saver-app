@@ -22,6 +22,7 @@ const ShaedList = () => {
       const { data, error } = await supabase
         .from('products')
         .select("*")
+        .limit(6)
         .order("id", { ascending: true });
 
       if (!error) {
@@ -57,7 +58,6 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
           <div className='product_scroll_div'>
           {products.map((product) => (
             <div className='' key={product.id}>
-        
 
               <img src={product.img} className='product_img' alt={product.name} />
                 <div className='product_card'>
