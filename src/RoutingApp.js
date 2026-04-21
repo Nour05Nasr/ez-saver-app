@@ -10,6 +10,7 @@ import Home from './Pages/Home';
 import Deals from './Pages/Deals';
 import Cart from './Pages/Cart';
 import Profile from './Pages/Profile';
+import Notifications from './Pages/Notifications';
 import SharedList from './Pages/SharedList';
 import SharedList2 from './Pages/SharedList2';
 import ItemFinder from './Pages/ItemFinder';
@@ -29,6 +30,7 @@ const RoutingApp = () => {
         <Route path="/Deals" element={<Deals />} />
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/Notifications" element={<Notifications />} />
         <Route path="/SharedList" element={<SharedList />} />
         <Route path="/SharedList2" element={<SharedList2 />} />
         <Route path="/ItemFinder/:id" element={<ItemFinder />} />

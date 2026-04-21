@@ -9,7 +9,9 @@ const HomeHeader = (props) => {
     return (<div className='flex_column header_w'>
         <div className='flex_row_end'>
             <h1 className='header_title'>Welcome User</h1>
+            <Link to='/Notifications'>
             <img src={notify} alt="" />
+            </Link>
         </div>
 
         <div className='search_container'>

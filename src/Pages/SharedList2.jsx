@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import BackHeader from '../Components/BackHeader';
 import Nav from '../Components/Nav';
 import empty_cart from '../Assets/empty_cart.png';
-import './Cart.css';
+import './SharedList.css';
 
 const SharedList2 = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +20,6 @@ const SharedList2 = () => {
         .order("id", { ascending: true });
 
       if (!error) {
-        // We initialize with checked: false so the bar starts at 0%
         const productsWithState = data.map(item => ({ 
           ...item, 
           qty: 1, 

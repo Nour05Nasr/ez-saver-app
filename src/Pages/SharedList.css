@@ -64,6 +64,7 @@
   font-weight: bold;
   z-index: 2;
 }
+
 .list_bg {
      width: 396px;
   background-color: var(--secondry_color);
