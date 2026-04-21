@@ -13,6 +13,7 @@ import like from '../Assets/like.svg';
 import ad from '../Assets/ad.png';
 import Nav from '../Components/Nav';
 import Title from '../Components/Title';
+import LikeIcon from '../Components/LikeIcon';
 import HomeHeader from '../Components/HomeHeader';
 import './Home.css';
 
@@ -30,7 +31,7 @@ const Home = () => {
                         <p className='card_h'>Shared List</p>
                     </div>
                         </Link>
-                        <Link to='/ItemFinder'>
+                        <Link to='/ItemsFinder'>
                     <div className='card2'> 
                         <img src={item_finder} alt="" />
                         <p className='card_h'>Item Finder</p>
@@ -62,30 +63,22 @@ const Home = () => {
                 <Title title='Our Partners' />
                       <div className='flex_row scroll_div2 bottom'>
                         <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
+                        <LikeIcon />
                             <h1 className='like_h'>Metro</h1>
                             <img className='partner' src={metro} alt="" />
                         </div>
                         <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
+                        <LikeIcon />
                             <h1 className='like_h'>Kazyon</h1>
                             <img className='partner' src={kazyon} alt="" /> 
                         </div>
                         <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
+                        <LikeIcon />
                             <h1 className='like_h'>Carfeour</h1>
                             <img className='partner' src={car} alt="" />
                         </div>
                         <div className='like_card'>  
-                        <div className='like_div'>
-                            <img src={like} alt="" />
-                        </div>
+                        <LikeIcon />
                             <h1 className='like_h'>Oscar</h1>
                             <img className='partner' src={oscar} alt="" />
                         </div>

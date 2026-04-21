@@ -5,6 +5,7 @@ import map from '../Assets/map.png';
 import arrow from '../Assets/arrow.svg'; 
 import locationIcon from '../Assets/location.svg';
 import Nav from '../Components/Nav';
+import CTA2 from '../Components/CTA2';
 import BackHeader from '../Components/BackHeader';
 import './ItemFinder.css';
 
@@ -41,7 +42,8 @@ const ItemFinder = () => {
                 </div>
             </div>
 
-            <img src={map} alt="Map" />
+              <img src={map} alt="Map" />
+              <CTA2 title='Find in AR' url='/ItemFinderAR' />
 
             <div className='map_card bottom_map'>
                 <img src={arrow} alt="arrow" className='nav_icon_bottom' />

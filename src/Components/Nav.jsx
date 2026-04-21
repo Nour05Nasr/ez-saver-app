@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useLocation } from 'react-router-dom'; 
 import homeIcon from '../Assets/home.svg';
 import dealsIcon from '../Assets/deals.svg';
 import scanIcon from '../Assets/scan.svg';
@@ -8,8 +8,7 @@ import profileIcon from '../Assets/profile.svg';
 import './Nav.css';
 
 const Nav = () => {
-  const location = useLocation(); // This detects the current URL path
-
+  const location = useLocation(); 
   const tabs = [
     { name: 'Home', icon: homeIcon, path: '/home' },
     { name: 'Deals', icon: dealsIcon, path: '/deals' },

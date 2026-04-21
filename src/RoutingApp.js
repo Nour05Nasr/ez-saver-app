@@ -13,7 +13,9 @@ import Profile from './Pages/Profile';
 import Notifications from './Pages/Notifications';
 import SharedList from './Pages/SharedList';
 import SharedList2 from './Pages/SharedList2';
+import ItemsFinder from './Pages/ItemsFinder';
 import ItemFinder from './Pages/ItemFinder';
+import ItemFinderAR from './Pages/ItemFinderAR';
 import Checkout from './Pages/Checkout';
 
 const RoutingApp = () => {
@@ -35,7 +37,9 @@ const RoutingApp = () => {
         <Route path="/Notifications" element={<Notifications />} />
         <Route path="/SharedList" element={<SharedList />} />
         <Route path="/SharedList2" element={<SharedList2 />} />
+        <Route path="/ItemsFinder" element={<ItemsFinder />} />
         <Route path="/ItemFinder/:id" element={<ItemFinder />} />
+        <Route path="/ItemFinderAR" element={<ItemFinderAR />} />
 
     </Routes>
     </BrowserRouter>
