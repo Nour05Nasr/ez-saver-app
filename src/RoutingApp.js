@@ -14,6 +14,7 @@ import Notifications from './Pages/Notifications';
 import SharedList from './Pages/SharedList';
 import SharedList2 from './Pages/SharedList2';
 import ItemFinder from './Pages/ItemFinder';
+import Checkout from './Pages/Checkout';
 
 const RoutingApp = () => {
     return (
@@ -29,6 +30,7 @@ const RoutingApp = () => {
         <Route path="/Home" element={<Home />} />
         <Route path="/Deals" element={<Deals />} />
         <Route path="/Cart" element={<Cart />} />
+        <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Notifications" element={<Notifications />} />
         <Route path="/SharedList" element={<SharedList />} />

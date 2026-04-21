@@ -30,7 +30,7 @@ const Notifications = () => {
   return (<div className='notify_body'>
     <div className='header_w flex_row_end'>
             <div className='flex_row'>
-            <Link to='/SharedList' className='back'>
+            <Link to='/Home' className='back'>
                 <img src={back2} alt="" />
             </Link>
                 <h1 className='notify_title'>Notifications</h1>
