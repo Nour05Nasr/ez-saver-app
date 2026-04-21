@@ -12,7 +12,7 @@ const Nav = () => {
   const tabs = [
     { name: 'Home', icon: homeIcon, path: '/home' },
     { name: 'Deals', icon: dealsIcon, path: '/deals' },
-    { name: 'Scan', icon: scanIcon, path: '/scan', isLarge: true },
+    { name: 'Scan', icon: scanIcon, path: '/BarcodeScanner', isLarge: true },
     { name: 'Cart', icon: cartIcon, path: '/cart' },
     { name: 'Profile', icon: profileIcon, path: '/profile' },
   ];
