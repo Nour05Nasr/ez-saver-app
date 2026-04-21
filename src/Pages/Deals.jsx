@@ -57,7 +57,10 @@ const Deals = () => {
               <img src={product.img} className='product_img' alt={product.name} />
               <div className='flex_column_start'>
                 <p className='product_name'>{product.name}</p>
-                <h2 className='price'>{product.price} EGP</h2>
+                <div className='flex_row_end'>
+                  <h2 className='price'>{product.price} EGP</h2>
+                  <h2 className='sale'>-3.00 EGP</h2>
+                </div>
                 {/* <div className='price_partner_row'>
                     <img src={product.logo} className='partner_mini_logo' alt="partner" />
                 </div> */}
@@ -80,7 +83,10 @@ const Deals = () => {
               <img src={product.img} className='product_img' alt={product.name} />
               <div className='flex_column_start'>
                 <p className='product_name'>{product.name}</p>
-                <h2 className='price'>{product.price} EGP</h2>
+                <div className='flex_row_end'>
+                  <h2 className='price'>{product.price} EGP</h2>
+                  <h2 className='sale'>-3.00 EGP</h2>
+                </div>
                 {/* <div className='price_partner_row'>
                     <img src={product.logo} className='partner_mini_logo' alt="partner" />
                 </div> */}

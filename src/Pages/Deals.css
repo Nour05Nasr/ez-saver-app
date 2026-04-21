@@ -106,3 +106,9 @@
     background-color: #fff;
     border: 2px solid #e6e6e6;
 }
+
+.sale{
+    font-family: var(--font_2);
+    font-size: 14px;
+    color: red;
+}
