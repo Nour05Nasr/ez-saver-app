@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../Supabase';
-import { Link } from 'react-router-dom';
-
+import { useParams, Link } from 'react-router-dom';
 import BackHeader from '../Components/BackHeader';
 import CTA2 from '../Components/CTA2';
 import Nav from '../Components/Nav';
@@ -9,75 +8,78 @@ import empty_cart from '../Assets/empty_cart.png';
 import './Cart.css';
 
 const Ingredients = () => {
-  const [recipes, setRecipes] = useState([]);
+const { id } = useParams();
+  const [recipe, setRecipe] = useState(null);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function getAllRecipes() {
+    async function getRecipeDetails() {
       setLoading(true);
-      const { data, error } = await supabase
+      
+      const { data: recipeData, error: recipeError } = await supabase
         .from('recipes')
         .select("*")
-        .limit(3)
-        .order("id", { ascending: true });
+        .eq('id', id)
+        .single(); 
 
-      if (!error) {
-        setRecipes(data);
+      if (!recipeError) {
+        setRecipe(recipeData);
       }
+
+      
       setLoading(false);
     }
-    getAllRecipes();
-  }, []);
+
+    getRecipeDetails();
+  }, [id]);
 
   useEffect(() => {
-    async function getAllProducts() {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('products')
-        .select("*")
-        .limit(6)
-        .order("id", { ascending: true });
-
-      if (!error) {
-        setProducts(data);
+      async function getAllProducts() {
+        setLoading(true);
+        const { data, error } = await supabase
+          .from('products')
+          .select("*")
+          .limit(6)
+          .order("id", { ascending: true });
+  
+        if (!error) {
+          const productsWithQty = data.map(item => ({ ...item, qty: 1 }));
+          setProducts(productsWithQty);
+        }
+        setLoading(false);
       }
-      setLoading(false);
-    }
-    getAllProducts();
-  }, []);
+      getAllProducts();
+    }, []);
 
-  const totalItems = products.length;
+  // if (loading) return <div>Loading...</div>;
+  if (!recipe) return <div>Loading Ingredient List</div>;
 
   return (
     <div className='cart_page'>
-
-      <BackHeader
-        title='Ingredients List' 
-        subtitle='6 items'
+<BackHeader
+        title='Ingredient List'
+        subtitle={`${products.length} items`}
         url='/Recipes' />
       
         <>
           <div className="wavy_divider"></div>
-          <div className='cart_bg'>
-                   {recipes.map((recipe) => (
-                        <div className='' key={recipe.id}>
-            <div className='flex_column'>
-              <div className='flex_row_end'>
-                <p className='label'>Recipe Cuisine</p>
-                <p className='label'>{recipe.cuisine}</p>
-              </div>
-              <div className='flex_row_end'>
-                <p className='label'>Recipe Serving</p>
-                <p className='label'>{recipe.cuisine}</p>
-              </div>
-              <div className='flex_row_end'>
-                <p className='label'>Recipe Calories</p>
-                <p className='label'>{recipe.calories}</p>
-              </div>
-              </div>
-            </div>
-                 ))}
+        <div className='cart_bg'>
+        <div className='flex_column'>
+          <p className='notify_title'>{recipe.recipe}</p>
+          <div className='flex_row_end'>
+            <p className='label'>Cuisine</p>
+            <p className='label'>{recipe.cuisine}</p>
+          </div>
+          <div className='flex_row_end'>
+            <p className='label'>Serving</p>
+            <p className='label'>{recipe.serving}</p>
+          </div>
+          <div className='flex_row_end'>
+            <p className='label'>Calories</p>
+            <p className='label'>{recipe.calories}</p>
+          </div>
+        </div>
 
             <div className='dashed_line'></div>
             <div className='product_list'>

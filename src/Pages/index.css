@@ -31,7 +31,7 @@ body{
     margin: 0;
     padding: 0;
   /* border-right: 2px solid; */
-  /* background-color: aquamarine; */
+  background-color: var(--primary_color);
 }
 
 *, *::before, *::after {
