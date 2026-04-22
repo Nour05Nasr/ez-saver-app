@@ -16,6 +16,7 @@ import SharedList2 from './Pages/SharedList2';
 import ItemsFinder from './Pages/ItemsFinder';
 import ItemFinder from './Pages/ItemFinder';
 import ItemFinderAR from './Pages/ItemFinderAR';
+import Recipes from './Pages/Recipes';
 import BarcodeScanner from './Pages/BarcodeScanner';
 import Checkout from './Pages/Checkout';
 
@@ -42,6 +43,7 @@ const RoutingApp = () => {
         <Route path="/ItemFinder/:id" element={<ItemFinder />} />
         <Route path="/ItemFinderAR" element={<ItemFinderAR />} />
         <Route path="/BarcodeScanner" element={<BarcodeScanner />} />
+        <Route path="/Recipes" element={<Recipes />} />
 
     </Routes>
     </BrowserRouter>

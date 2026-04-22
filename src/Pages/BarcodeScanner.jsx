@@ -1,6 +1,6 @@
 import { Html5QrcodeScanner } from 'html5-qrcode';
 import { useEffect } from 'react';
-import BackHeader from '../Components/BackHeader';
+import Header from '../Components/Header';
 import Nav from '../Components/Nav';
 import scanner from '../Assets/scanner.svg';
 import './BarcodeScanner.css';
@@ -27,7 +27,7 @@ const BarcodeScanner = () => {
   }, []);
 
   return (<div className='scan_body'>
-        <BackHeader title='Scanner' />
+      <h1 className='header_title header_w'>Barcode Scanner</h1>
 
                     <div className='flex_row map_card'>
                         <img src={scanner} alt="arrow" className='nav_icon_top' />

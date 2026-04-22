@@ -37,18 +37,22 @@ const Home = () => {
                         <p className='card_h'>Item Finder</p>
                     </div>
                         </Link>
+                        <Link to='/Compare'>
                     <div className='card3'> 
                         <img src={compare_products} alt="" />
                         <p className='card_h'>Compare Products</p>
                     </div>
-                    <div className='card4'> 
-                        <img src={allergy_shield} alt="" />
-                        <p className='card_h'>Allergy Shield</p>
-                    </div>
+                        </Link>
+                        <Link to='/Recipes'>
                     <div className='card5'> 
                         <img src={recipe_generator} alt="" />
-                        <p className='card_h'>Recipe Generator</p>
+                        <p className='card_h'>Shop by Recipe</p>
                     </div>
+                        </Link>
+                    {/* <div className='card4'> 
+                        <img src={allergy_shield} alt="" />
+                        <p className='card_h'>Allergy Shield</p>
+                    </div> */}
                 </div>
 
                 <div className='ad_card'>

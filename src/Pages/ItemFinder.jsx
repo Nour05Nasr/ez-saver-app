@@ -30,7 +30,7 @@ const ItemFinder = () => {
 
     return (
         <div className='home_body center'>
-            <BackHeader title='Item Finder' url='/SharedList2' />
+            <BackHeader title='Item Finder' url='/ItemsFinder' />
 
             <div className='flex_row map_card'>
                 <img src={arrow} alt="arrow" className='nav_icon_top' />
