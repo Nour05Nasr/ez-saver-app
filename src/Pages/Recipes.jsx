@@ -6,10 +6,12 @@ import Category from '../Components/Category';
 import Title from '../Components/Title';
 import like from '../Assets/like.svg';
 import ad from '../Assets/ad.png';
+import {Link} from 'react-router-dom';
+
 import './Deals.css';
 
 const Recipes = () => {
-  const [recipes, setRecipess] = useState([]);
+  const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -21,7 +23,7 @@ const Recipes = () => {
         // .order("id", { ascending: true }); 
 
             if (!error) {
-                setRecipess(data);
+                setRecipes(data);
                 // console.log("Fetched Partners:", data);
             }
             setLoading(false);
@@ -52,6 +54,7 @@ const Recipes = () => {
             <Title title='TOP Recipes' />
         <div className='product_scroll_div'>
           {recipes.map((recipe) => (
+            <Link to={`/Ingredients/${recipe.id}`}>
             <div className='product_card' key={recipe.id}>
               <img src={recipe.img} className='product_img' alt={recipe.name} />
               <div className='flex_column_start'>
@@ -65,6 +68,7 @@ const Recipes = () => {
                 </div> */}
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -75,6 +79,7 @@ const Recipes = () => {
             <Title title='ALL Recipes' />
              <div className='product_scroll_div bottom'>
           {recipes.map((recipe) => (
+            <Link to={`/Ingredients/${recipe.id}`}>
             <div className='product_card' key={recipe.id}>
                 {/* <div className='like_div2'>
                     <img src={like} alt="like" />
@@ -91,6 +96,7 @@ const Recipes = () => {
                 </div> */}
               </div>
             </div>
+            </Link>
           ))}
 
         </div>
