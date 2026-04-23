@@ -102,7 +102,7 @@ const Compare = () => {
                         <div className='flex_row_end'>
                         <h2 className='price'>{product.price} EGP</h2>
                           <Link className='find_link' to={`/ItemFinder/${product.id}`} >
-                          <p>VS</p>
+                          <p className='notify_title'>VS</p>
                           </Link>
                         </div>
                         <p className='product_name'>{product.name}</p>

@@ -97,7 +97,7 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
                           
                 <div className='flex_row_end'>
                 <h2 className='price'>{product.price} EGP</h2>
-                  <Link className='find_link' to='/SharedList2'>
+                  <Link className='find_link' to={`/ItemFinder/${product.id}`}>
                   <p>Find</p>
                   </Link>
                 </div>

@@ -37,7 +37,7 @@ const Home = () => {
                         <p className='card_h'>Item Finder</p>
                     </div>
                         </Link>
-                        <Link to='/Compare'>
+                        <Link to='/ItemsCompare'>
                     <div className='card3'> 
                         <img src={compare_products} alt="" />
                         <p className='card_h'>Compare Products</p>
