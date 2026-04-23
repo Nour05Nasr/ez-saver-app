@@ -53,7 +53,7 @@ const { id } = useParams();
     }, []);
 
   // if (loading) return <div>Loading...</div>;
-  if (!recipe) return <div>Loading Ingredient List</div>;
+  if (!recipe) return <div className='loader'>Loading Ingredient List...</div>;
 
   return (
     <div className='cart_page'>

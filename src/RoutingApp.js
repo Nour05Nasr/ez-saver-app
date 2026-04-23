@@ -18,6 +18,8 @@ import ItemFinder from './Pages/ItemFinder';
 import ItemFinderAR from './Pages/ItemFinderAR';
 import Recipes from './Pages/Recipes';
 import Ingredients from './Pages/Ingredients';
+import ItemsCompare from './Pages/ItemsCompare';
+import Compare from './Pages/Compare';
 import BarcodeScanner from './Pages/BarcodeScanner';
 import Checkout from './Pages/Checkout';
 
@@ -46,6 +48,8 @@ const RoutingApp = () => {
         <Route path="/BarcodeScanner" element={<BarcodeScanner />} />
         <Route path="/Recipes" element={<Recipes />} />
         <Route path="/Ingredients/:id" element={<Ingredients />} />
+        <Route path="/ItemsCompare" element={<ItemsCompare />} />
+        <Route path="/Compare" element={<Compare />} />
 
     </Routes>
     </BrowserRouter>

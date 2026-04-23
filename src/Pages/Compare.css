@@ -1,0 +1,66 @@
+.comparison-table {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background: white;
+  overflow-x: auto; /* Allows scrolling if you compare many items */
+}
+
+.table-row {
+  display: grid;
+  /* First column is 120px fixed, remaining columns share space equally */
+  grid-template-columns: 120px repeat(auto-fit, minmax(100px, 1fr));
+  border-bottom: 1px solid #eee;
+  min-width: 300px;
+}
+
+.row-label, .row-value, .header-cell {
+  padding: 15px 10px;
+  text-align: center;
+  font-size: var(--p);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orange-text {
+        font-family: var(--font_2);
+ font-size: 14PX;
+  color: var(--accent_color);
+  font-weight: 700;
+}
+
+.row-value {
+    font-family: var(--font_2);
+    font-size: 14PX;
+  color: var(--main_color);
+  border-left: 1px solid #eee;
+}
+
+.loader {
+    font-family: var(--font_2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--main_color);
+  font-family: var(--font_1);
+}
+
+.vs{
+    width: 80px;
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary_color);
+font-family: var(--font_1);
+font-size: 38px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+border-radius: 50%;
+background-color: var(--accent_color);
+}
