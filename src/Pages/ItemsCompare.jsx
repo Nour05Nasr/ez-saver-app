@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../Supabase';
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import Nav from '../Components/Nav';
 import BackHeader from '../Components/BackHeader';
@@ -83,14 +84,22 @@ const ItemsCompare = () => {
       <div className='section_container'>
         <Title title={`${selectedCategory.toUpperCase()} PRODUCTS`} />
         <div className='product_scroll_div'>
-          {products.map(product => <ProductItem product={product} />)}
+          {products.map(product => 
+          <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
+            <ProductItem product={product} />
+          </Link>
+          )}
         </div>
       </div>
 
       <div className='section_container'>
         <Title title='ALL Products' />
         <div className='product_scroll_div bottom'>
-          {products.map(product => <ProductItem product={product} />)}
+          {products.map(product => 
+          <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
+            <ProductItem product={product} />
+          </Link>
+          )}
         </div>
       </div>
       

@@ -57,8 +57,8 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
 
           <div className='product_scroll_div'>
           {products.map((product) => (
+            <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
             <div className='' key={product.id}>
-
               <img src={product.img} className='product_img' alt={product.name} />
                 <div className='product_card'>
               <div className='flex_column_start'>
@@ -76,6 +76,7 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
                 </div> */}
               </div>
             </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -86,6 +87,7 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
             
              <div className='product_scroll_div bottom'>
           {products.map((product) => (
+            <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
             <div className='' key={product.id}>
                 {/* <div className='like_div2'>
                     <img src={like} alt="like" />
@@ -108,6 +110,7 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
                 </div> */}
               </div>
             </div>
+            </Link>
           ))}
         </div>
 
