@@ -6,40 +6,68 @@ import './SplashScreen.css';
 
 const SplashScreen = ({ onAnimationEnd }) => {
   const [isActive, setIsActive] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
 
   useEffect(() => {
-    // 1. Initial Delay (matches your Figma 400ms delay)
-    const timer = setTimeout(() => {
-      setIsActive(true);
-    }, 400);
+    setIsActive(true);
 
-    // 2. Transition to Onboarding (matches animation duration + buffer)
-    const transitionTimer = setTimeout(() => {
+    const exitTimer = setTimeout(() => {
+      setIsExiting(true);
+    }, 2000); 
+    const finishTimer = setTimeout(() => {
       if (onAnimationEnd) onAnimationEnd();
-    }, 2500);
+    }, 3000);
 
     return () => {
-      clearTimeout(timer);
-      clearTimeout(transitionTimer);
+      clearTimeout(exitTimer);
+      clearTimeout(finishTimer);
     };
   }, [onAnimationEnd]);
 
+
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsActive(true);
+  //   }, 400);
+
+  //   const transitionTimer = setTimeout(() => {
+  //     if (onAnimationEnd) onAnimationEnd();
+  //   }, 2500);
+
+  //   return () => {
+  //     clearTimeout(timer);
+  //     clearTimeout(transitionTimer);
+  //   };
+  // }, [onAnimationEnd]);
+
+  // useEffect(() => {
+  //   // Start initial animations
+  //   setIsActive(true);
+
+  //   // This duration matches the CSS ::after transition end (approx 2.8s total)
+  //   const transitionTimer = setTimeout(() => {
+  //     if (onAnimationEnd) onAnimationEnd();
+  //   }, 2800);
+
+  //   return () => clearTimeout(transitionTimer);
+  // }, [onAnimationEnd]);
+
   return (
     <div className={`splash-container ${isActive ? 'active' : ''}`}>
-      {/* Morphing background layer */}
+
       <div className="bg-shape"></div>
 
       <div className="logo-wrapper">
-          {/* <h1 className="logo-text">EZ-SAVER</h1> */}
         <img 
           src={logo3} 
           alt="EZ-SAVER Logo" 
-          className="logo-icon" 
+          className="logo-text-img" 
         />
         <img 
           src={logo1} 
           alt="EZ-SAVER Logo" 
-          className="logo-icon" 
+          className="logo-icon-img" 
         />
       </div>
     </div>

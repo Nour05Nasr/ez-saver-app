@@ -87,12 +87,8 @@ const SharedList2 = () => {
               {products.map((product) => (
                 <div className='cart_card' key={product.id}>
                   <div className='product_details flex_row_end'>
-                    <input 
-                      type="checkbox" 
-                      className='checkbox' 
-                      checked={product.checked}
-                      onChange={() => toggleCheck(product.id)}
-                    />
+
+                    <img src={product.img} alt={product.name} />
                     
                     <div className='column_start'>
                       <h3 className='product_name'>{product.name}</h3>
@@ -101,6 +97,12 @@ const SharedList2 = () => {
                     </div>
                     
                     <div className='flex_column gap_vh'>
+                               <input 
+                      type="checkbox" 
+                      className='checkbox' 
+                      checked={product.checked}
+                      onChange={() => toggleCheck(product.id)}
+                    />
                       <Link to={`/ItemFinder/${product.id}`} className='find_link'>Find</Link>
                       <button className='remove_link' onClick={() => removeItem(product.id)}>
                         Remove
