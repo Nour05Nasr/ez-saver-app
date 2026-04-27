@@ -97,10 +97,7 @@ const SharedList2 = () => {
                     <div className='column_start'>
                       <h3 className='product_name'>{product.name}</h3>
                       <p className='price'>{product.aisle}</p>
-                      <div className='flex_row'>
-                        <p className='header_subtitle'>{product.value}</p>
-                        <p className='header_subtitle'>{product.unit}</p>
-                      </div>
+                      <p className='header_subtitle'>{product.value} {product.unit}</p>
                     </div>
                     
                     <div className='flex_column gap_vh'>

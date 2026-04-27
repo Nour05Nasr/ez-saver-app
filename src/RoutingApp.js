@@ -22,6 +22,7 @@ import ItemsCompare from './Pages/ItemsCompare';
 import Compare from './Pages/Compare';
 import BarcodeScanner from './Pages/BarcodeScanner';
 import Checkout from './Pages/Checkout';
+import Receipt from './Pages/Receipt';
 
 const RoutingApp = () => {
     return (
@@ -50,6 +51,7 @@ const RoutingApp = () => {
         <Route path="/Ingredients/:id" element={<Ingredients />} />
         <Route path="/ItemsCompare" element={<ItemsCompare />} />
         <Route path="/Compare" element={<Compare />} />
+        <Route path="/Receipt" element={<Receipt />} />
 
     </Routes>
     </BrowserRouter>

@@ -58,11 +58,11 @@ const ItemFinder = () => {
                     </div>
                     <div className='flex_row_end'>
                        <p className='header_subtitle'>Time saved</p>
-                       <p className='header_subtitle'>60 EGP</p>
+                       <p className='header_subtitle'>10 minutes</p>
                     </div>
                     <div className='flex_row_end'>
                        <p className='header_subtitle'>Money saved</p>
-                       <p className='header_subtitle'>10minutes</p>
+                       <p className='header_subtitle'>60 EGP</p>
                     </div>
                     <div className='flex_row_end'>
                        <p className='header_subtitle'>Date & Time</p>
@@ -70,9 +70,9 @@ const ItemFinder = () => {
                     </div>
                 </div>
 
-                <div className='bottom_map gap_vh'>
-                    <CTA2 title='View Full Reciept' url='/Reciept' />
-                    <CTA1 title='E-mail Reciept' url='/Reciept' />
+                <div className='ctas bottom_map gap_vh'>
+                    <CTA2 title='View Full Reciept' url='/Receipt' />
+                    <CTA1 title='E-mail Reciept' url='/Receipt' />
                 </div>
 
             <Nav />

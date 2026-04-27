@@ -170,3 +170,10 @@
 .cart_page:has(.empty_cart_container) {
     background-color: #fff;
 }
+
+.ctas{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
