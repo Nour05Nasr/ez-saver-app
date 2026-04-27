@@ -120,13 +120,13 @@
 .find_link{
   font-family: var(--font_2);
   display: flex;
-  width: 69.387px;
-  height: 37.006px;
-padding: 11.564px;
+  /* width: 60px; */
+  height: 40px;
+padding: 8%;
 justify-content: center;
 align-items: center;
-gap: 11.564px;
-border-radius: 6.939px;
+border-radius: 8px;
+font-family: var(--font_2);
 color: var(--primary_color);
 background: var(--accent_color);
 }
