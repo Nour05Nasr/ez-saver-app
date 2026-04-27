@@ -10,11 +10,11 @@ import './Nav.css';
 const Nav = () => {
   const location = useLocation(); 
   const tabs = [
-    { name: 'Home', icon: homeIcon, path: '/home' },
-    { name: 'Deals', icon: dealsIcon, path: '/deals' },
+    { name: 'Home', icon: homeIcon, path: '/Home' },
+    { name: 'Deals', icon: dealsIcon, path: '/Deals' },
     { name: 'Scan', icon: scanIcon, path: '/BarcodeScanner', isLarge: true },
-    { name: 'Cart', icon: cartIcon, path: '/cart' },
-    { name: 'Profile', icon: profileIcon, path: '/profile' },
+    { name: 'Cart', icon: cartIcon, path: '/Cart' },
+    { name: 'Profile', icon: profileIcon, path: '/Profile' },
   ];
 
   return (
