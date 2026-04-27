@@ -1,12 +1,12 @@
 textarea:focus, input:focus {
-    color: var(--primary_color);
+    color: var(--main_color);
 }
 
 input, select, textarea{
-    color: var(--primary_color);
+    color: var(--main_color);
 }
 input::placeholder {
-    color: var(--primary_color);
+    color: var(--main_color);
   }
 .log_input{
     width: 100%;
@@ -17,8 +17,8 @@ input::placeholder {
     align-items: start;
     /* align-self: stretch; */
     border-radius: 7.626px;
-    border: 2px solid rgba(18, 17, 128, 0.8);
-    background: rgba(18, 17, 128, 0.4);
+    border: 2px solid rgb(18, 17, 128);
+    /* background: rgba(18, 17, 128, 0.2); */
     font-family: var(--font_2);
     color: var(--main_color);
     text-align: left;

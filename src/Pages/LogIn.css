@@ -65,7 +65,7 @@ justify-content: start;
 align-items: center;
 gap: 3%;
 color: var(--accent_color);
-background-color: var(--accent_color);
+/* background-color: var(--accent_color); */
 }
 
 .column_start{
@@ -146,7 +146,7 @@ align-items: start;
     align-items: start;
     align-self: stretch;
     border-radius: 7.626px;
-    border: 2.3px solid rgba(18, 17, 128, 0.8);
+    border: 2.3px solid rgb(18, 17, 128);
     font-family: var(--font_2);
     color: var(--main_color);
     text-align: left;

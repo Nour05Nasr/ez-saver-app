@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import shared_list from '../Assets/shared_list.svg';
 import item_finder from '../Assets/item_finder.svg';
@@ -18,10 +18,18 @@ import HomeHeader from '../Components/HomeHeader';
 import './Home.css';
 
 const Home = () => {
+const [userDisplayName, setUserDisplayName] = useState('User');
+
+    useEffect(() => {
+        const storedName = localStorage.getItem('userName');
+        if (storedName) {
+            setUserDisplayName(storedName);
+        }
+    }, []);
 
     return (
         <div className='home_body'>
-            <HomeHeader />
+        <HomeHeader username={userDisplayName} />            
             <div className='flex_column gap_vh '>
                 <Title title='Frequently Used' />
            <div className='flex_row scroll_div'>

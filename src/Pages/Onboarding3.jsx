@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import onboarding3 from '../Assets/onboarding3.png';
 import PageIndicator from '../Components/PageIndicator';
+import onboarding_logo from '../Assets/onboarding_logo.svg';
 import SplashScreen from './SplashScreen';
 import CTA2 from '../Components/CTA2';
 import CTA1 from '../Components/CTA1';
@@ -28,7 +29,7 @@ function Onboarding3() {
           {/* <Link to='/LogIn'>
             <p className='guest'>Continue as a Guest</p>
           </Link> */}
-          {/* <CTA1 title='Continue Guest' url='/Home' /> */}
+          <CTA1 title='Sign Up' url='/Home' />
         </div>
     </div>
   );
