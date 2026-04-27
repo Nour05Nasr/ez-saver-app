@@ -45,7 +45,7 @@ const ProductDetails = () => {
                     
                     <div className='column_start w2'>
                     <div className="product_bg">
-                        <img className='product_img' src={item.img} alt={item.name} className="details_img" />
+                        <img className='product_img2' src={item.img} alt={item.name} className="details_img" />
                     </div>
 
                         <div className="flex_row_end">
