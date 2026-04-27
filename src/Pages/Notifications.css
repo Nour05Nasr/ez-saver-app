@@ -1,24 +1,28 @@
 .notify_body{
     width: 396px;
-    background-color: var(--main_color);
+    background-color: var(--primary_color);
+    /* background-color: var(--main_color); */
 }
 
 .notify_title{
     font-family: var(--font_1);
     font-size: 18px;
-    color: var(--primary_color);
+    color: var(--main_color);
+    /* color: var(--primary_color); */
 }
 
 .underline2{
     font-family: var(--font_2);
     font-size: 12px;
-        color: var(--primary_color);
+        color: var(--main_color);
+        /* color: var(--primary_color); */
         text-decoration: underline;
 }
 
 .notify_bg {
      width: 396px;
-  background-color: var(--primary_color);
+  background-color: var(--main_color);
+  /* background-color: var(--primary_color); */
   padding: 0 20px 20px 20px;
   min-height: 100vh;
   display: flex;
@@ -30,7 +34,8 @@
 .wavy_divider3 {
     width: 396px;
   height: 50px;
-  background-color: var(--primary_color); 
+  background-color: var(--main_color); 
+  /* background-color: var(--primary_color);  */
   mask-image: radial-gradient(20px at 50% 100%, transparent 100%, #000 100%);
   mask-size: 40px 100%;
   transform: rotate(180deg);
@@ -45,8 +50,9 @@ justify-content: center;
 align-items: flex-start;
 gap: 6px;
 border-radius: 12px;
-border: 2px solid var(--Electric-Royal, #121180);
-background: rgba(18, 17, 128, 0.6);
+border: 2px solid var(--accent_color);
+background-color: var(--primary_color);
+/* background: rgba(18, 17, 128, 0.6); */
 }
 
 .notify{
@@ -59,7 +65,8 @@ background: rgba(18, 17, 128, 0.6);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-        color: var(--primary_color);
+        color: var(--main_color);
+        /* color: var(--primary_color); */
 }
 
 .notify_p{
@@ -68,5 +75,6 @@ background: rgba(18, 17, 128, 0.6);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-        color: var(--primary_color);
+        color: var(--main_color);
+        /* color: var(--primary_color); */
 }

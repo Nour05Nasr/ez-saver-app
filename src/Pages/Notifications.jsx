@@ -17,8 +17,8 @@ const Notifications = () => {
       const { data, error } = await supabase
         .from('notifications')
         .select("*")
-        .limit(4)
-        .order("id", { ascending: true });
+        .limit(3)
+        .order("id", { ascending: false });
 
       if (!error)
         setNotifications(data);
@@ -28,7 +28,9 @@ const Notifications = () => {
   }, []);
 
   return (<div className='notify_body'>
-    <div className='header_w flex_row_end'>
+      <BackHeader title='Notification' subtitle='3 unread' url='/Home' />
+      
+    {/* <div className='header_w flex_row_end'>
             <div className='flex_row'>
             <Link to='/Home' className='back'>
                 <img src={back2} alt="" />
@@ -36,7 +38,7 @@ const Notifications = () => {
                 <h1 className='notify_title'>Notifications</h1>
             </div>
                 <p className='underline2'>4 unread</p>
-        </div>
+        </div> */}
       
           <div className="wavy_divider3"></div>
           <div className='notify_bg gap_vh'>
