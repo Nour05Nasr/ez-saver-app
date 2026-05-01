@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../Components/Nav';
-import profile_img from '../Assets/profile_img.svg';
+import profile from '../Assets/profile.png';
 import BackHeader from '../Components/Header2';
 import arrow_right from '../Assets/arrow_right.svg';
 import './Profile.css';
@@ -9,9 +9,9 @@ import './Profile.css';
 const Profile = () => {
   // Dynamic data for stats
   const stats = [
-    { label: 'Lists', value: 6 },
-    { label: 'trips', value: 3 },
-    { label: 'likes', value: 20 },
+    { label: 'Lists', value: 8 },
+    { label: 'Trips', value: 6},
+    { label: 'Likes', value: 12 },
   ];
 
   const generalMenu = [
@@ -19,13 +19,17 @@ const Profile = () => {
   ];
 
   return (
-    <div className='profile_container'>
-      <BackHeader title="Profile Settings" url="/Home" />
+    <div className='home_body profile_container'>
+      <h1 className='profile_title header_w '>Profile Settings</h1>
 
-      <div className='profile_content'>
-        <div className='avatar_section'>
-          <div className='avatar_circle'>
-            <img className='fa-solid' src={profile_img} alt="" />          </div>
+      <div className='profile_content top1'>
+        <div className='avatar_section flex_row gap_vh'>
+            <img className='fa-solid' src={profile} alt="" />          
+          <div className='column_start'>
+          <h2 className='header_title'>Nour Nasr</h2>
+          <p className='header_subtitle'>nour.a.nasr05@gmail.com</p>
+          <p className='header_subtitle'>3 Connected Family Members</p>
+          </div>
         </div>
 
         <div className='stats_row'>
@@ -37,7 +41,6 @@ const Profile = () => {
           ))}
         </div>
 
-        {/* General Section */}
         <div className='menu_card'>
           <h4 className='menu_category'>GENERAL</h4>
           {generalMenu.map((item, index) => (
@@ -48,7 +51,6 @@ const Profile = () => {
           ))}
         </div>
 
-        {/* Interface Section */}
         <div className='menu_card'>
           <h4 className='menu_category'>INTERFACE</h4>
           <div className='menu_item'>

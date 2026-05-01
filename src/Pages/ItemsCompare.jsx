@@ -6,7 +6,7 @@ import Nav from '../Components/Nav';
 import BackHeader from '../Components/BackHeader';
 import Category from '../Components/Category';
 import Title from '../Components/Title';
-import './SharedList.css';
+import './Compare.css';
 
 const ItemsCompare = () => {
   const [products, setProducts] = useState([]);

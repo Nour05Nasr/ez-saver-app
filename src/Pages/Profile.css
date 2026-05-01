@@ -1,7 +1,10 @@
 .profile_container {
     background-color: #f9f9f9;
     min-height: 100vh;
-    padding-bottom: 100px; /* Space for Nav */
+    padding-bottom: 100px;
+    background-image: url(./../Assets/profile_bgg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .profile_content {
@@ -11,7 +14,12 @@
     gap: 20px;
 }
 
-/* Avatar Styling */
+.profile_title{
+    font-family: var(--font_1);
+    font-size: 18px;
+    color: var(--primary_color);
+}
+
 .avatar_section {
     display: flex;
     justify-content: center;
@@ -28,7 +36,7 @@
     justify-content: center;
     /* color: white; */
     font-size: 50px;
-    border: 4px solid #fff;
+    border: 4px solid var(--primary_color);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -39,22 +47,23 @@
 }
 
 .stat_box {
-    background-color: var(--accent_color);
     flex: 1;
     border-radius: 12px;
-    padding: 15px;
+    padding: 18px;
     text-align: center;
-    color: white;
-    border: 2px solid var(--main_color);
+    background-color: var(--primary_color);
+    border: 2px solid var(--accent_color);
 }
 
 .stat_value {
     font-family: var(--font_1);
+    color: var(--main_color);
     font-size: 28px;
     font-weight: 800;
 }
 
 .stat_label {
+    color: var(--main_color);
     font-family: var(--font_2);
     font-size: 16px;
     opacity: 0.9;
@@ -64,17 +73,16 @@
     float: right;
 }
 
-
 .menu_card {
     background-color: var(--main_color);
     border-radius: 15px;
     padding: 20px;
-    /* border: 2px solid #ff8a00;  */
+    border: 2px solid var(--accent_color);
 }
 
 .menu_category {
-        font-family: var(--font_1);
-    color: white;
+    font-family: var(--font_1);
+    color: var(--primary_color);
     font-size: 12px;
     letter-spacing: 1px;
     margin-bottom: 15px;
@@ -98,16 +106,15 @@
 
 .sign_out {
     font-family: var(--font_2);
-    background-color: #c6c6c6;
+    background-color: var(--accent_color);
     border-radius: 12px;
     padding: 18px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--primary_color);
     text-decoration: none;
-    font-weight: bold;
-    border: 3px solid #a9a9a9;
+    border: 3px solid  var(--accent_color);
 }
 
 .switch {
@@ -130,7 +137,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--primary_color);
     transition: .4s;
 }
 
@@ -141,7 +148,7 @@
     width: 18px;
     left: 3px;
     bottom: 3px;
-    background-color: white;
+    background-color: var(--primary_color);
     transition: .4s;
 }
 
