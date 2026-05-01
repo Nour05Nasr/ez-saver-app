@@ -29,7 +29,7 @@ function Onboarding3() {
           {/* <Link to='/LogIn'>
             <p className='guest'>Continue as a Guest</p>
           </Link> */}
-          <CTA1 title='Sign Up' url='/Home' />
+          {/* <CTA1 title='Sign Up' url='/Home' /> */}
         </div>
     </div>
   );

@@ -26,7 +26,8 @@
 }
 
 body{
-    width: 394px !important;
+    width: 100% !important;
+    /* width: 394px !important; */
     /* height: 100vh;  */
     margin: 0;
     padding: 0;

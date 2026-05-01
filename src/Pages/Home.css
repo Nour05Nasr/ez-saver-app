@@ -1,6 +1,6 @@
 .home_body{
-    width: 394px;
-    /* width: 100%; */
+    /* width: 394px; */
+    width: 100%;
     /* height: 100vh; */
     background-color: var(--primary_color);
     overflow-y: auto;

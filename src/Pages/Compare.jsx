@@ -116,8 +116,8 @@ const Compare = () => {
                 <div className='flex_column_start'>
                   <div className='flex_row_end'>
                     <h2 className='price'>{product.price} EGP</h2>
-                    <Link className='find_link' to={`/Compare?id1=${id1}&id2=${product.id}`}>
-                      <p className='notify_title'>VS</p>
+                    <Link className='vs' to={`/Compare?id1=${id1}&id2=${product.id}`}>
+                      <p className='vs'>VS</p>
                     </Link>
                   </div>
                   <p className='product_name'>{product.name}</p>

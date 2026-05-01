@@ -22,7 +22,7 @@
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
-    line-height: 120%; /* 48px */
+    line-height: 120%; 
     margin: 0;
 }
 .login_p{
@@ -79,14 +79,6 @@ align-items: start;
 }
 
 .error_container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    /* background-color: #fff1f0;
-    border: 1px solid #ffa39e; */
-    padding: 12px;
-    border-radius: 8px;
-    margin: 15px 0;
     width: 100%;
     animation: shake 0.2s ease-in-out 0s 2; /* Attention grabber */
 }
@@ -165,4 +157,7 @@ align-items: start;
     color: var(--primary_color);
     /* background: rgba(18, 17, 128, 0.5); */
     background-color: var(--main_color);
+}
+.gap_bottom{
+    margin: 0 0 8px 0;
 }

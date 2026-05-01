@@ -56,8 +56,8 @@ const ItemsCompare = () => {
           <div className='flex_column_start'>
             <div className='flex_row_end'>
               <h2 className='price'>{product.price} EGP</h2>
-              <div className='find_link' onClick={() => handleSelect(product.id)} style={{cursor: 'pointer'}}>
-                <p className='notify_title'>{isSelected ? 'REMOVE' : 'VS'}</p>
+              <div className='vs' onClick={() => handleSelect(product.id)} style={{cursor: 'pointer'}}>
+                <p className=''>{isSelected ? 'X' : 'VS'}</p>
               </div>
             </div>
             <p className='product_name'>{product.name}</p>
@@ -85,9 +85,9 @@ const ItemsCompare = () => {
         <Title title={`${selectedCategory.toUpperCase()} PRODUCTS`} />
         <div className='product_scroll_div'>
           {products.map(product => 
-          <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
+          // <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
             <ProductItem product={product} />
-          </Link>
+          // </Link>
           )}
         </div>
       </div>
@@ -96,9 +96,9 @@ const ItemsCompare = () => {
         <Title title='ALL Products' />
         <div className='product_scroll_div bottom'>
           {products.map(product => 
-          <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
+          // <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
             <ProductItem product={product} />
-          </Link>
+          // </Link>
           )}
         </div>
       </div>

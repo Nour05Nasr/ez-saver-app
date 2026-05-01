@@ -2,13 +2,14 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 396px;
-  height: 80px;
+  width: 100%;
+  /* width: 396px; */
+  height: 68px;
   background-color: var(--primary_color);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-top: 1px solid #f0f0f0;
+  border-top: 3px solid #f0f0f0;
   z-index: 1000;
   /* gap: 6%; */
 }
