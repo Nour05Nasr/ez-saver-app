@@ -17,8 +17,6 @@ const BarcodeScanner = () => {
       
       setIsActive(true);
 
-      // Mobile optimization: Use environment for back camera
-      // qrbox is set larger for better mobile scanning
       await scannerRef.current.start(
         { facingMode: "environment" },
         { 
@@ -32,7 +30,7 @@ const BarcodeScanner = () => {
           if (navigator.vibrate) navigator.vibrate(200);
           stopCamera();
         },
-        () => { /* Frame ignored */ }
+        () => { }
       );
     } catch (err) {
       console.error("Camera failed:", err);

@@ -99,3 +99,15 @@
     color: #999;
     font-weight: 300;
 }
+
+
+.header_btn{
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-family: var(--font_2);
+    font-size: 14px;
+    color: var(--primary_color);
+    font-weight: 500;
+    border: none;
+    background-color: #ff8a00;
+}

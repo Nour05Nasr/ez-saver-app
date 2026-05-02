@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../Supabase';
 import { Link } from 'react-router-dom';
-import BackHeader from '../Components/BackHeader';
+import BtnHeader from '../Components/BtnHeader';
 import Nav from '../Components/Nav';
+import MembersBar from '../Components/MembersBar';
 import empty_cart from '../Assets/empty_cart.png';
 import './SharedList.css';
 
@@ -49,15 +50,19 @@ const SharedList2 = () => {
 
   return (
     <div className='cart_page'>
-      <BackHeader
-        title='Shared Shopping List' 
-        url='/SharedList'
-        subtitle={`${totalItems} items`} 
-      />
+
       
       {totalItems > 0 ? (
         <>
-          <div className="wavy_divider2"></div>
+        <BtnHeader
+        title='Shared List'
+        url='/SharedList'
+        btn='+ Add Item'
+        btn_url='/SharedList' />
+
+        <MembersBar />
+
+          <div className="wavy_divider2 top1"></div>
           <div className='list_bg'>
             <div className='flex_column gap_vh'>
               <div className='flex_row_end'>
@@ -93,7 +98,10 @@ const SharedList2 = () => {
                     <div className='column_start'>
                       <h3 className='product_name'>{product.name}</h3>
                       <p className='price'>{product.aisle}</p>
+                      <div className='flex_row gap_vh'>
+                      <p className='header_subtitle'>{product.price} EGP</p>
                       <p className='header_subtitle'>{product.value} {product.unit}</p>
+                      </div>
                     </div>
                     
                     <div className='flex_column gap_vh'>
