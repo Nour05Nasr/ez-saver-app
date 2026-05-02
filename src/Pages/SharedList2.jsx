@@ -126,7 +126,7 @@ const SharedList2 = () => {
         <div className='empty_cart_container'>
           <h1 className='header_title'>YOUR LIST IS EMPTY</h1>
            <p className='header_subtitle'>
-           Add more products to your list automatically and enjoy your shopping journey
+           Add more products to your list and enjoy your shopping journey.
           </p>
           <img src={empty_cart} alt="Empty" className='empty_img' />
         </div>

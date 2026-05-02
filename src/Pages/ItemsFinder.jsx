@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Nav from '../Components/Nav';
 import BackHeader from '../Components/BackHeader';
 import Category from '../Components/Category';
+import FindIcon from '../Components/FindIcon';
 import Title from '../Components/Title';
 import MembersBar from '../Components/MembersBar';
 import './SharedList.css';
@@ -57,26 +58,18 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
 
           <div className='product_scroll_div'>
           {products.map((product) => (
-            <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
-            <div className='' key={product.id}>
-              <img src={product.img} className='product_img' alt={product.name} />
-                <div className='product_card'>
-              <div className='flex_column_start'>
-                          
-                <div className='flex_row_end'>
+                     <div className='shared_card'>  
+              <Link to={`/ItemFinder/${product.id}`}>
+                <FindIcon />
+              </Link>
+              <Link className='flex_column' to={`/ProductDetails/${product.id}`} key={product.id} >
+                <img className='partner' src={product.img} alt="" />
+                <div className='column_start'>
                 <h2 className='price'>{product.price} EGP</h2>
-                  <Link className='find_link' to={`/ItemFinder/${product.id}`} >
-                  <p>Find</p>
-                  </Link>
+                <p className='product_name top_0'>{product.name}</p>
                 </div>
-                <p className='product_name'>{product.name}</p>
-                </div>
-                {/* <div className='price_partner_row'>
-                    <img src={product.logo} className='partner_mini_logo' alt="partner" />
-                </div> */}
-              </div>
-            </div>
             </Link>
+              </div>
           ))}
         </div>
       </div>
@@ -87,30 +80,18 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
             
              <div className='product_scroll_div bottom'>
           {products.map((product) => (
-            <Link to={`/ProductDetails/${product.id}`} key={product.id} className='product_card_link'>
-            <div className='' key={product.id}>
-                {/* <div className='like_div2'>
-                    <img src={like} alt="like" />
-                </div> */}
-
-              <img src={product.img} className='product_img' alt={product.name} />
-                <div className='product_card'>
-              <div className='flex_column_start'>
-                          
-                <div className='flex_row_end'>
+                        <div className='shared_card'>  
+              <Link to={`/ItemFinder/${product.id}`}>
+                <FindIcon />
+              </Link>
+              <Link className='flex_column' to={`/ProductDetails/${product.id}`} key={product.id} >
+                <img className='partner' src={product.img} alt="" />
+                <div className='column_start'>
                 <h2 className='price'>{product.price} EGP</h2>
-                  <Link className='find_link' to={`/ItemFinder/${product.id}`}>
-                  <p>Find</p>
-                  </Link>
+                <p className='product_name top_0'>{product.name}</p>
                 </div>
-                <p className='product_name'>{product.name}</p>
-                </div>
-                {/* <div className='price_partner_row'>
-                    <img src={product.logo} className='partner_mini_logo' alt="partner" />
-                </div> */}
-              </div>
-            </div>
             </Link>
+              </div>
           ))}
         </div>
 

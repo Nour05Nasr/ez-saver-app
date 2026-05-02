@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import back from '../Assets/back.svg';
 import './HomeHeader.css';
 
-const Header2 = (props) => {
+const BtnHeader = (props) => {
 
     return (<div className='header_w flex_row_end'>
         <div className='flex_row'>
@@ -18,4 +18,4 @@ const Header2 = (props) => {
         </Link>
     </div>);}
 
-export default Header2;
+export default BtnHeader;

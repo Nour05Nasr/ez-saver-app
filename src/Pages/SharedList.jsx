@@ -10,7 +10,7 @@ import AddIcon from '../Components/AddIcon';
 import './SharedList.css';
 
 
-const ShaedList = () => {
+const SharedList = () => {
   const [products, setProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('Diary'); // Default selection
   const [loading, setLoading] = useState(true);
@@ -109,4 +109,4 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
   );
 }
 
-export default ShaedList;
+export default SharedList;
