@@ -83,9 +83,8 @@
 .menu_category {
     font-family: var(--font_1);
     color: var(--primary_color);
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1px;
-    margin-bottom: 15px;
     opacity: 0.8;
 }
 
@@ -94,7 +93,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: var(--primary_color);
     padding: 15px 0;
     border-bottom: 1px solid var(--accent_color);
     font-size: 16px;
@@ -116,6 +115,8 @@
     text-decoration: none;
     border: 3px solid  var(--accent_color);
 }
+
+
 
 .switch {
     position: relative;
@@ -148,7 +149,7 @@
     width: 18px;
     left: 3px;
     bottom: 3px;
-    background-color: var(--primary_color);
+    background-color: var(--main_color);
     transition: .4s;
 }
 
@@ -163,3 +164,81 @@ input:checked + .slider {
 .slider.round:before {
     border-radius: 50%;
 }
+
+
+[data-theme="dark"] {
+    --main_color: #F9F9F9; 
+    --primary_color: #121180; 
+    --text_color_inverse: #F9F9F9; 
+}
+
+.profile_container {
+    background-color: var(--primary_color);
+    transition: background-color 0.3s ease;
+}
+
+/* .menu_item span {
+    color: var(--main_color); 
+} */
+
+
+.profile_container {
+    background-color: var(--primary_color);
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background-image: url(./../Assets/profile_bgg.png); /* Light mode image */
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+[data-theme="dark"] .profile_container {
+    background-image: url(./../Assets/profile_bgggg.png);
+}
+
+.profile_container:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(./../Assets/profile_bgg.png); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] .profile_container:after {
+    background-image: url(./../Assets/profile_bgggg.png);
+}
+
+
+
+.menu_category:after {
+    font-family: var(--font_3);
+    color: var(--primary_color);
+    font-size: 14px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.arabic_wrapper {
+    text-align: right;
+}
+
+.arabic_wrapper .column_start {
+    align-items: flex-start;
+    padding-right: 15px; 
+    padding-left: 0;
+}
+
+.arabic_wrapper .arrow_icon {
+    float: left;
+}
+
+.arabic_wrapper .menu_item {
+    flex-direction: row; 
+}
+

@@ -6,6 +6,7 @@
     --p: 1.4vw;
     --font_1: 'Azonix', sans-serif;
     --font_2: 'Poppins', sans-serif;
+    --font_3: 'GE SS Two Medium', sans-serif;
     --main_color: #121180;
     --primary_color: #F9F9F9;
     --secondry_color: #2952D8;
@@ -85,5 +86,3 @@ ul {
   align-items: center;
   justify-content: center;
 }
-
-

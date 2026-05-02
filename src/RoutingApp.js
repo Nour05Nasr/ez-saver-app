@@ -10,12 +10,12 @@ import Home from './Pages/Home';
 import Deals from './Pages/Deals';
 import Cart from './Pages/Cart';
 import Profile from './Pages/Profile';
+import ProfileAr from './Pages/ProfileAr';
 import Notifications from './Pages/Notifications';
 import SharedList from './Pages/SharedList';
 import SharedList2 from './Pages/SharedList2';
 import ItemsFinder from './Pages/ItemsFinder';
 import ItemFinder from './Pages/ItemFinder';
-import ItemFinderAR from './Pages/ItemFinderAR';
 import Recipes from './Pages/Recipes';
 import Ingredients from './Pages/Ingredients';
 import ItemsCompare from './Pages/ItemsCompare';
@@ -41,12 +41,12 @@ const RoutingApp = () => {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/ProfileAr" element={<ProfileAr />} />
         <Route path="/Notifications" element={<Notifications />} />
         <Route path="/SharedList" element={<SharedList />} />
         <Route path="/SharedList2" element={<SharedList2 />} />
         <Route path="/ItemsFinder" element={<ItemsFinder />} />
         <Route path="/ItemFinder/:id" element={<ItemFinder />} />
-        <Route path="/ItemFinderAR" element={<ItemFinderAR />} />
         <Route path="/BarcodeScanner" element={<BarcodeScanner />} />
         <Route path="/Recipes" element={<Recipes />} />
         <Route path="/Ingredients/:id" element={<Ingredients />} />

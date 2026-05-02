@@ -5,8 +5,7 @@ import profile from '../Assets/profile.png';
 import arrow_right from '../Assets/arrow_right.svg';
 import './Profile.css';
 
-const Profile = () => {
-  // Check if dark mode is already active by looking for a data attribute on the html/body
+const ProfileAr = () => {
   const [isDarkMode, setIsDarkMode] = useState(document.documentElement.getAttribute('data-theme') === 'dark');
 
   const toggleDarkMode = () => {
@@ -21,26 +20,27 @@ const Profile = () => {
   };
 
   const stats = [
-    { label: 'Lists', value: 8 },
-    { label: 'Trips', value: 6 },
-    { label: 'Likes', value: 12 },
+    { label: 'القوائم', value: 8 },
+    { label: 'الرحلات', value: 6 },
+    { label: 'الإعجابات', value: 12 },
   ];
 
   const generalMenu = [
-    'Accessibility', 'Privacy Policy', 'Terms & Conditions', 'Help & Support'
+    'إمكانية الوصول', 'سياسة الخصوصية', 'الشروط والأحكام', 'المساعدة والدعم'
   ];
 
   return (
-    <div className='home_body profile_container'>
-      <h1 className='profile_title header_w '>Profile Settings</h1>
+    /* Added dir="rtl" and a specific class for Arabic styling overrides */
+    <div className='home_body profile_container arabic_wrapper' dir="rtl">
+      <h1 className='profile_title header_w '>إعدادات الملف الشخصي</h1>
 
       <div className='profile_content top1'>
         <div className='avatar_section flex_row gap_vh'>
           <img className='fa-solid' src={profile} alt="Profile" />          
           <div className='column_start'>
-            <h2 className='header_title'>Nour Nasr</h2>
+            <h2 className='header_title'>نور نصر</h2>
             <p className='header_subtitle'>nour.a.nasr05@gmail.com</p>
-            <p className='header_subtitle'>3 Connected Family Members</p>
+            <p className='header_subtitle'>٣ أفراد من العائلة متواصلون</p>
           </div>
         </div>
 
@@ -53,36 +53,33 @@ const Profile = () => {
           ))}
         </div>
 
-        {/* General Menu */}
         <div className='menu_card'>
-          <h4 className='menu_category'>GENERAL</h4>
+          <h4 className='menu_category'>عام</h4>
           {generalMenu.map((item, index) => (
             <div key={index} className='menu_item'>
               <span>{item}</span>
-              <img className='float_right' src={arrow_right} alt="" />
+              {/* Rotated arrow for RTL */}
+              <img className='arrow_icon' src={arrow_right} alt="" style={{ transform: 'rotate(180deg)' }} />
             </div>
           ))}
         </div>
 
-        {/* Interface Menu */}
         <div className='menu_card'>
-          <h4 className='menu_category'>INTERFACE</h4>
+          <h4 className='menu_category'>واجهة</h4>
           <div className='menu_item'>
-            <span>Text Size</span>
-            <img className='float_right' src={arrow_right} alt="" />
+            <span>حجم النص</span>
+            <img className='arrow_icon' src={arrow_right} alt="" style={{ transform: 'rotate(180deg)' }} />
           </div>
 
-          {/* Language Switch: Links to the Arabic Copy */}
-          <Link to="/ProfileAr" className='menu_item' style={{ textDecoration: 'none' }}>
-            <span>Change Language</span>
+          <Link to="/Profile" className='menu_item' style={{ textDecoration: 'none' }}>
+            <span>تغيير اللغة</span>
             <div className='lang_div'>
-              <p className='lang' style={{ color: 'var(--accent_color)', fontWeight: 'bold' }}>AR</p>
+              <p className='lang' style={{ color: 'var(--accent_color)', fontWeight: 'bold' }}>EN</p>
             </div>
           </Link>
 
-          {/* Dark Mode Switch */}
           <div className='menu_item no_border'>
-            <span>Dark Mode</span>
+            <span>الوضع المظلم</span>
             <label className="switch">
               <input 
                 type="checkbox" 
@@ -95,8 +92,8 @@ const Profile = () => {
         </div>
 
         <Link to="/LogIn" className='sign_out'>
-          <span>Sign Out</span>
-          <img className='float_right' src={arrow_right} alt="" />
+          <span>تسجيل الخروج</span>
+          <img className='arrow_icon' src={arrow_right} alt="" style={{ transform: 'rotate(180deg)' }} />
         </Link>
       </div>
 
@@ -105,4 +102,4 @@ const Profile = () => {
   );
 }
 
-export default Profile;
+export default ProfileAr;
