@@ -50,7 +50,7 @@ const RoutingApp = () => {
         <Route path="/SharedList2" element={<SharedList2 />} />
         <Route path="/ItemsFinder" element={<ItemsFinder />} />
         <Route path="/ItemFinder/:id" element={<ItemFinder />} />
-        <Route path="/ItemFinderAR/:id" element={<ItemFinderAR />} />
+        <Route path="/ItemFinderAR" element={<ItemFinderAR />} />
         <Route path="/BarcodeScanner" element={<BarcodeScanner />} />
         <Route path="/Recipes" element={<Recipes />} />
         <Route path="/Ingredients/:id" element={<Ingredients />} />

@@ -24,7 +24,8 @@ const ItemsFinder = () => {
         .from('products')
         .select("*")
         .limit(8)
-        .order("id", { ascending: true });
+        .order("id", { random : true });
+        // .order("id", { ascending: true });
 
       if (!error) {
         setProducts(data);
@@ -37,9 +38,8 @@ const ItemsFinder = () => {
 const filteredProducts = products.filter(p => p.category === selectedCategory);
   return (
     <div className='home_body'>
-      <BackHeader title='Shared Shopping List' url='/Home' />
+      <BackHeader title='Item Finder' url='/ItemsFinder' />
       {/* <h1 className='header_title header_w'></h1> */}
-        <MembersBar />
       <div className='section_container'>
         <div className='category_scroll_div'>
           {categories.map((cat) => (

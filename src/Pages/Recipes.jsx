@@ -57,7 +57,7 @@ const Recipes = () => {
           {recipes.map((recipe) => (
             <Link to={`/Ingredients/${recipe.id}`}>
             <div className='product_card' key={recipe.id}>
-              <img src={recipe.img} className='product_img' alt={recipe.name} />
+              <img  src={recipe.img} className='product_img' alt={recipe.name} />
               <div className='flex_column_start'>
                 <p className='product_name'>{recipe.name}</p>
                 <div className='flex_row_end'>

@@ -7,7 +7,7 @@ import './ItemFinderAR.css';
 const ItemFinderAR = () => {
     return (
         <div className='home_body center'>
-            <video autoPlay src={AR} />
+            <video className='video' controls autoPlay src={AR} />
         </div>
     );
 }

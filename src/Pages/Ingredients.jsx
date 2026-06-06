@@ -53,12 +53,12 @@ const { id } = useParams();
     }, []);
 
   // if (loading) return <div>Loading...</div>;
-  if (!recipe) return <div className='loader'>Loading Ingredient List...</div>;
+  if (!recipe) return <div className='loader'>Loading Ingredients List...</div>;
 
   return (
     <div className='cart_page'>
 <BackHeader
-        title='Ingredient List'
+        title='Ingredients List'
         subtitle={`${products.length} items`}
         url='/Recipes' />
       
@@ -85,7 +85,7 @@ const { id } = useParams();
             <div className='product_list'>
               {products.map((product) => (
                 <div className='cart_card' key={product.id}>
-                    <img src={product.img} alt={product.name} />
+                    <img className='product_img' src={product.img} alt={product.name} />
                
                   <div className='column_start'>
                     <h3 className='product_name'>{product.name}</h3>

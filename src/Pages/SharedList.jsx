@@ -25,8 +25,8 @@ const SharedList = () => {
         .from('products')
         .select("*")
         .limit(8)
-        .order("id", { ascending: true });
-
+        .order("id", { random : true });
+        
       if (!error) {
         setProducts(data);
       }
