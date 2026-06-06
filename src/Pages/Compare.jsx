@@ -92,7 +92,7 @@ const Compare = () => {
     const isSelected = selectedIds.includes(product.id);
     return (
       <div className={`product_wrapper ${isSelected ? 'selected_item' : ''}`} key={product.id}>
-        <img src={product.img} className='product_img' alt={product.name} />
+        <img className='product_img' src={product.img} alt={product.name} />
         <div className='product_card'>
           <div className='flex_column_start'>
             <div className='flex_row_end'>
@@ -116,7 +116,7 @@ const Compare = () => {
         <div className="product-image-container flex_row">
           {compareItems.map((product, index) => (
             <React.Fragment key={product.id}>
-              <img src={product.img} alt={product.name} className="product-img" />
+              <img className='product_img' src={product.img} alt={product.name} />
               {index === 0 && <div className="vs_div">VS</div>}
             </React.Fragment>
           ))}
