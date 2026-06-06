@@ -1,6 +1,6 @@
 .product_bg{
     width: 100%;
-    height: 320px;
+    /* height: 320px; */
     padding: 40px;
     display: flex;
     justify-content: center;
@@ -9,6 +9,7 @@
     border: 2px solid #CECECE;
     background: #FFF;
     margin: 0 0 8px 0;
+    background-position: contain;
 }
 
 .product_img2{

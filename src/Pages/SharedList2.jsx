@@ -93,7 +93,7 @@ const SharedList2 = () => {
                 <div className='cart_card' key={product.id}>
                   <div className='product_details flex_row_end'>
 
-                    <img src={product.img} alt={product.name} />
+                    <img className='product_img' src={product.img} alt={product.name} />
                     
                     <div className='column_start'>
                       <h3 className='product_name'>{product.name}</h3>

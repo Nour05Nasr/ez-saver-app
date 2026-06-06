@@ -12,10 +12,10 @@ import './SharedList.css';
 
 const ItemsFinder = () => {
   const [products, setProducts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('Diary'); // Default selection
+  const [selectedCategory, setSelectedCategory] = useState('Dairy'); 
   const [loading, setLoading] = useState(true);
 
-  const categories = ['Diary', 'Poultry', 'Grains', 'Deli', 'Household', 'Bakery'];
+  const categories = ['Dairy', 'Poultry', 'Grains', 'Deli', 'Household', 'Bakery'];
 
     useEffect(() => {
     async function getAllProducts() {
@@ -23,7 +23,7 @@ const ItemsFinder = () => {
       const { data, error } = await supabase
         .from('products')
         .select("*")
-        .limit(6)
+        .limit(8)
         .order("id", { ascending: true });
 
       if (!error) {
@@ -63,7 +63,7 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
                 <FindIcon />
               </Link>
               <Link className='flex_column' to={`/ProductDetails/${product.id}`} key={product.id} >
-                <img className='partner' src={product.img} alt="" />
+                <img className='partner product_img' src={product.img} alt="" />
                 <div className='column_start'>
                 <h2 className='price'>{product.price} EGP</h2>
                 <p className='product_name top_0'>{product.name}</p>
@@ -85,7 +85,7 @@ const filteredProducts = products.filter(p => p.category === selectedCategory);
                 <FindIcon />
               </Link>
               <Link className='flex_column' to={`/ProductDetails/${product.id}`} key={product.id} >
-                <img className='partner' src={product.img} alt="" />
+                <img className='partner product_img' src={product.img} alt="" />
                 <div className='column_start'>
                 <h2 className='price'>{product.price} EGP</h2>
                 <p className='product_name top_0'>{product.name}</p>

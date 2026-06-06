@@ -10,12 +10,12 @@ import './Compare.css';
 
 const ItemsCompare = () => {
   const [products, setProducts] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState('Diary');
+  const [selectedCategory, setSelectedCategory] = useState('Dairy');
   const [loading, setLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState([]);
   
   const navigate = useNavigate();
-  const categories = ['Diary', 'Poultry', 'Grains', 'Deli', 'Household', 'Bakery'];
+  const categories = ['Dairy', 'Poultry', 'Grains', 'Deli', 'Household', 'Bakery'];
 
   useEffect(() => {
     async function getAllProducts() {
@@ -23,7 +23,7 @@ const ItemsCompare = () => {
       const { data, error } = await supabase
       .from('products')
       .select('*')
-      .limit(10)
+      .limit(8)
       .order("id", { ascending: true });
       if (!error) setProducts(data);
       setLoading(false);
@@ -33,7 +33,7 @@ const ItemsCompare = () => {
 
   const handleSelect = (id) => {
     setSelectedIds((prev) => {
-      if (prev.includes(id)) return prev.filter(item => item !== id); // Deselect
+      if (prev.includes(id)) return prev.filter(item => item !== id); 
       if (prev.length < 2) {
         const newSelection = [...prev, id];
         if (newSelection.length === 2) {

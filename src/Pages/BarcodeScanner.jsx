@@ -26,7 +26,6 @@ const BarcodeScanner = () => {
         },
         (decodedText) => {
           console.log("Scan Match:", decodedText);
-          // Optional: Vibrate on success (good for APKs)
           if (navigator.vibrate) navigator.vibrate(200);
           stopCamera();
         },

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../Supabase';
+import {Link} from 'react-router-dom';
 import Nav from '../Components/Nav';
 import Header from '../Components/Header';
+import BackHeader from '../Components/BackHeader';
 import Category from '../Components/Category';
 import Title from '../Components/Title';
 import like from '../Assets/like.svg';
 import ad from '../Assets/ad.png';
-import {Link} from 'react-router-dom';
-
 import './Deals.css';
 
 const Recipes = () => {
@@ -20,7 +20,7 @@ const Recipes = () => {
     const { data, error } = await supabase
         .from('recipes')
         .select("*")
-        // .order("id", { ascending: true }); 
+        .order("id", { ascending: true }); 
 
             if (!error) {
                 setRecipes(data);
@@ -36,11 +36,12 @@ const Recipes = () => {
   return (
     <div className='home_body'>
       {/* <Header title='Deals & Promotions' url='/Home' /> */}
-      <h1 className='header_title header_w'>Shop By Recipe</h1>
+      <BackHeader title='Shop By Recipe' url='/Home' />
+      {/* <h1 className='header_title header_w'></h1> */}
       <div className='section_container'>
-        <div className='flex_row_between'>
+        {/* <div className='flex_row_between'>
             <h3 className='header_title'>Cuisines</h3>
-        </div>
+        </div> */}
         <div className='category_scroll_div'>
           <Category title='Italian' />
           <Category title='Egyptian' />

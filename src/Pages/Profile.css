@@ -186,14 +186,14 @@ input:checked + .slider {
     background-color: var(--primary_color);
     min-height: 100vh;
     padding-bottom: 100px;
-    background-image: url(./../Assets/profile_bgg.png); /* Light mode image */
+    background-image: url(./../Assets/profile_bggg.png); /* Light mode image */
     background-repeat: no-repeat;
     background-size: contain;
     transition: background-color 0.3s ease, background-image 0.3s ease;
 }
 
 [data-theme="dark"] .profile_container {
-    background-image: url(./../Assets/profile_bgggg.png);
+    background-image: url(./../Assets/profile_bggg.png);
 }
 
 .profile_container:after {
@@ -211,7 +211,7 @@ input:checked + .slider {
 }
 
 [data-theme="dark"] .profile_container:after {
-    background-image: url(./../Assets/profile_bgggg.png);
+    background-image: url(./../Assets/profile_bggg.png);
 }
 
 

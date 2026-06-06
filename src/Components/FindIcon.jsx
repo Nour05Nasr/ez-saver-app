@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import find from '../Assets/find.svg';
+import finder from '../Assets/finder.svg';
 import './AddIcon.css';
 
 
@@ -12,7 +12,7 @@ const AddIcon = () => {
             className={`add_div ${liked ? 'liked' : ''}`} 
             onClick={() => setLiked(!liked)}>
             {/* <h1 className='add_icon'>+</h1> */}
-            <img src={find} alt="" />
+            <img src={finder} alt="" />
         </div>
     );
 };
