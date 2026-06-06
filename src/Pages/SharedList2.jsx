@@ -51,14 +51,14 @@ const SharedList2 = () => {
   return (
     <div className='cart_page'>
 
+      <BtnHeader
+      title='Shared List'
+      url='/SharedList'
+      btn='+ Add Item'
+      btn_url='/SharedList' />
       
       {totalItems > 0 ? (
         <>
-        <BtnHeader
-        title='Shared List'
-        url='/SharedList'
-        btn='+ Add Item'
-        btn_url='/SharedList' />
 
         <MembersBar />
 
@@ -93,7 +93,7 @@ const SharedList2 = () => {
                 <div className='cart_card' key={product.id}>
                   <div className='product_details flex_row_end'>
 
-                    <img className='product_img' src={product.img} alt={product.name} />
+                    <img className='product_img3' src={product.img} alt={product.name} />
                     
                     <div className='column_start'>
                       <h3 className='product_name'>{product.name}</h3>

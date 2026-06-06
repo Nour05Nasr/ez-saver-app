@@ -85,7 +85,7 @@ const { id } = useParams();
             <div className='product_list'>
               {products.map((product) => (
                 <div className='cart_card' key={product.id}>
-                    <img className='product_img' src={product.img} alt={product.name} />
+                    <img className='product_img3' src={product.img} alt={product.name} />
                
                   <div className='column_start'>
                     <h3 className='product_name'>{product.name}</h3>

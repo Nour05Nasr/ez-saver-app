@@ -177,3 +177,9 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.product_img3 {
+    width: 35%;
+    height: 120px;
+    object-fit: contain;
+}
